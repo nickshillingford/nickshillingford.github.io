@@ -1,21 +1,21 @@
 @media screen and (max-width:225px) {
     #container {
-        width: 100%;
+        width: 95vw;
         height: 95vh;
     }
     
     #h {
-        width: 100%;
+        width: 98vw;
     }
     
     #name {
         margin: auto;
         position: absolute;
-        top: 125px; left: 285px; bottom: 0; right: 0;
+        top: 10px; left: 65px; bottom: 0; right: 0;
     }
     
     #control {
-        width: 100%;
+        width: 95vw;
         height: 10vh;
         float: none;
     }
@@ -23,23 +23,25 @@
     #list {
         margin: auto;
         position: absolute;
-        width: 175%;
-        top: 20px; left: 150px; bottom: 0; right: 0;
+        width: 98vw;
+        top: -150px; left: -20px; bottom: 0; right: 0;
     }
     
     #screen {
-        width: 100%;
+        width: 98vw;
         height: 60vh;
         float: none;
     }
     
     #console {
-        width: 450px;
-        height: 600px;
+        width: 150px;
+        height: 300px;
+        
+        font-size: 10pt;
         
         margin: auto;
         position: absolute;
-        top: 800px; left: 75px; bottom: 0; right: 0;
+        top: 75px; left: 0; bottom: 0; right: 0;
     }
     
     #email {
