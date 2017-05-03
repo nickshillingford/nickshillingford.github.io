@@ -93,4 +93,5 @@ body {
 .ls {
     padding-top: 125px;
     padding-left: 0.8cm;
+    cursor: pointer;
 }
