@@ -1,7 +1,4 @@
-@media only screen 
-and (min-device-width : 175px) 
-and (max-device-width : 875px)
-and (orientation: portrait) {
+@media screen and (min-width:200px) and (max-width:750px) {
     #container {
        width: 100%;
     }
