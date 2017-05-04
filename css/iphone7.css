@@ -1,6 +1,6 @@
 @media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
+and (min-device-width : 175px) 
+and (max-device-width : 875px) {
     #container {
        width: 100%;
     }
@@ -12,7 +12,7 @@ and (max-device-width : 667px) {
     #pic {
          margin: auto;
          position: absolute;
-         top: 30px; right: 0px; left:0px; bottom: 0px;
+         top: 30px; right: 0px; left:15px; bottom: 0px;
      }
             
      #one {
