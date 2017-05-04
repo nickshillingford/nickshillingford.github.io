@@ -1,25 +1,40 @@
-@media only screen and (min-device-width:200px) and (max-device-width:750px) {
-    #container {
-       width: 100%;
-    }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 750px) {
             
-    #photo {
-        width: 100%;
-    }
-                   
-     #one {
-          width: 100%;
-     }
+            body {
+            background: #ecf0f1;
+        }
             
-     #two {
-          width: 100%;
-     }
+            #container {
+                margin: 0px auto;
+                width: 100%;
+            }
             
-     #three {
-          width: 100%;
-     }
+            #photo {
+                width: 100%;
+                background: #f1c40f;
+            }
             
-     #four {
-          width: 100%;
-     }
-}
+            #one {
+                width: 100%;
+                background: #9b59b6;
+            }
+            
+            #two {
+                width: 100%;
+                background: #27ae60;
+            }
+            
+            #three {
+                width: 100%;
+                background: #3498db;
+            }
+            
+            #four {
+                width: 100%;
+                background: #9b59b6;
+            }
+            
+            .sec {
+                height: 100px;
+            }
+        }
