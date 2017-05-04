@@ -1,0 +1,48 @@
+body {
+            background: #ecf0f1;
+        }
+        
+        #container {
+            width: 600px;
+            margin: 0px auto;
+        }
+        
+        #photo {
+            width: 600px;
+            height: 75px;
+            background: #bdc3c7;
+        }
+        
+        #one {
+            width: 300px;
+            height: 200px;
+            float: left;
+            background: #3498db;
+        }
+        
+        #two {
+            width: 300px;
+            height: 200px;
+            float: left;
+            background: #27ae60;
+        }
+        
+        #three {
+            width: 300px;
+            height: 200px;
+            float: left;
+            background: #9b59b6;
+        }
+        
+        #four {
+            width: 300px;
+            height: 200px;
+            float: left;
+            background: #34495e;
+        }
+        
+        #pic {
+            margin: auto;
+            position: absolute;
+            top: 20px;right: 0px;left: 925px;bottom: 0px;
+        }
