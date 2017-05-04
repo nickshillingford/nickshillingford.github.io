@@ -1,71 +1,31 @@
-@media screen and (max-width:225px) {
+@media screen and (max-width:250px) {
     #container {
-        width: 95vw;
-        height: 95vh;
+       width: 100%;
     }
-    
-    #h {
-        width: 98vw;
+            
+    #photo {
+        width: 100%;
     }
-    
-    #name {
-        margin: auto;
-        position: absolute;
-        top: 10px; left: 65px; bottom: 0; right: 0;
-    }
-    
-    #control {
-        width: 95vw;
-        height: 10vh;
-        float: none;
-    }
-    
-    #list {
-        margin: auto;
-        position: absolute;
-        width: 98vw;
-        top: -150px; left: -20px; bottom: 0; right: 0;
-    }
-    
-    #screen {
-        width: 98vw;
-        height: 60vh;
-        float: none;
-    }
-    
-    #console {
-        width: 150px;
-        height: 300px;
-        
-        font-size: 10pt;
-        
-        margin: auto;
-        position: absolute;
-        top: 75px; left: 0; bottom: 0; right: 0;
-    }
-    
-    #email {
-        font-size: 3em;
-        top: 0; left: 50px; bottom: 0; right: 0;
-    }
-    
-    #github {
-        font-size: 3em;
-        top: 0; left: 200px; bottom: 0; right: 0;
-    }
-    
-    #twitter {
-        font-size: 3em;
-        top: 0; left: 325px; bottom: 0; right: 0;
-    }
-    
-    ul {
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    
-    li {
-        display: inline-block;
-    }
+            
+    #pic {
+         margin: auto;
+         position: absolute;
+         top: 30px;right: 0px;left: 90px;bottom: 0px;
+     }
+            
+     #one {
+          width: 100%;
+     }
+            
+     #two {
+          width: 100%;
+     }
+            
+     #three {
+          width: 100%;
+     }
+            
+     #four {
+          width: 100%;
+     }
 }
