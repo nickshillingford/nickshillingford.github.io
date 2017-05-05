@@ -5,30 +5,34 @@ body {
 #container {
     margin: 0px auto;
     width: 100%;
+    
+    font-family: "Josefin Slab";
+	font-style: normal;
+	font-variant: normal;
+    font-weight: 500;
+	line-height: 24px;
 }
             
 #top {
     width: 100%;
     height: 125px;
-    padding-top: 2px;
+    padding-top: 1px;
     background: #1abc9c;
-    
     color: #2c3e50;
-    
-    font-family: "Josefin Slab";
-	font-size: 32px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 24px;
-    text-shadow: 12px 12px 6px rgba(0,0,0,0.2);
+    font-size: 36px;
+    text-shadow: 12px 12px 6px rgba(0,0,0,0.3);
 }
             
 #menu {
     width: 100%;
     height: 450px;
     padding-top: 0.2px;
-    background: #EEEEEE;
+}
+
+#about {
+    width: 100%;
+    height: 550px;
+    font-size: 32px;
 }
 
 #title {
@@ -38,10 +42,8 @@ body {
 .menuContainer {
    margin: 0px auto;
    width: 100%;
-    
    display: grid;
    grid-template-columns: 50% 50%;
-    
    text-decoration: underline;
    text-decoration-color: #34495e; 
 }
@@ -51,16 +53,55 @@ body {
   padding: 1em;
   height: 130px;
   font-size: 2.2em;
-    
-    font-family: "Josefin Slab";
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 24px;
-    
-    text-shadow: 4px 4px 2px rgba(0,0,0,0.1);
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.1);
 }
 
 .m {
     padding-top: 10px;
+}
+
+.bubble {
+  position: absolute;
+  width: 100px;
+  height: 32px;
+  
+  left: 0.5cm;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid #3498db;
+  background: #3498db;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.bubble:before {
+  content:"";
+  position: absolute;
+    /*left: 100%;*/
+  right: 100%;
+  top: 4px;
+  width: 0;
+  height: 0;
+  
+  border-top: 7px solid transparent;
+  border-right: 14px solid #3498db;
+  border-bottom: 7px solid transparent;
+    /*
+    border-top: 7px solid transparent;
+  border-left: 14px solid #3498db;
+  border-bottom: 7px solid transparent;*/
+}
+
+.bubble textarea {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  font-size: 8.3pt;
+  color: #EEEEEE;
+  
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+  resize: none;
 }
