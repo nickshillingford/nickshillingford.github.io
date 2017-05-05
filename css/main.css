@@ -1,11 +1,5 @@
 body {
-    background: #ecf0f1;
-    font-family: "Josefin Slab";
-    font-size: 18pt;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 18px;
+    background: #EEEEEE;
 }
             
 #container {
@@ -13,58 +7,60 @@ body {
     width: 100%;
 }
             
-#photo {
+#top {
     width: 100%;
-    height: 75px;
-    padding-top: 10px;
-    background: #ecf0f1;
+    height: 125px;
+    padding-top: 2px;
+    background: #1abc9c;
+    
+    color: #2c3e50;
+    
+    font-family: "Josefin Slab";
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 24px;
+    text-shadow: 12px 12px 6px rgba(0,0,0,0.2);
 }
             
-#one {
-    width: 100%;
-    height: 300px;
-    padding-top: 0.2px;
-    background: #ecf0f1;
-}
-               
-#screen {
-    width: 92%;
-    height: 200px;
-    padding-top: 2px;
-    border-radius: 5px;
-    background: #34495e;
-    font-size: 16pt;
-    color: #ecf0f1;
-}
-
-#line {
-    float: left;
-    padding-left: 10px;
-}
-
 #menu {
-    list-style: none;
-    padding-right: 40px;
+    width: 100%;
+    height: 375px;
+    padding-top: 0.2px;
+    background: #EEEEEE;
 }
 
-/*ANIMATION*/
-.line {
-    color: #ecf0f1;
-    border-right: 2px solid rgba(255,255,255,.75);
-    white-space: nowrap;
-    overflow: hidden;
+#title {
+    font-size: 24px;
 }
 
-.intro {
-    animation: intro 1s steps(40) 0.5s 1 normal both, movingCursor 1s steps(44) infinite normal;
+.menuContainer {
+   margin: 0px auto;
+    width: 100%;
+    
+     display: grid;
+  grid-template-columns: 50% 50%;
+    
+    text-decoration: underline;
+    text-decoration-color: #34495e; 
 }
 
-@keyframes intro {
-  from { width: 0; }
-  to { width: 11.1em; }
+.item {
+  color: #2c3e50;
+  padding: 0.8em;
+  height: 130px;
+  font-size: 1.6em;
+    
+    font-family: "Josefin Slab";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 24px;
+    
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.1);
 }
 
-@keyframes movingCursor {
-  from { border-right-color: #ecf0f1; }
-  to { border-right-color: transparent; }
+.m {
+    padding-top: 3px;
 }
