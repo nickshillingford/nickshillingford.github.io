@@ -1,5 +1,5 @@
 body {
-    background: #EEEEEE;
+    background: #ffffff;
 }
             
 #container {
@@ -9,7 +9,7 @@ body {
     font-family: "Josefin Slab";
 	font-style: normal;
 	font-variant: normal;
-    font-weight: 500;
+    font-weight: 600;
 	line-height: 24px;
 }
             
@@ -18,21 +18,16 @@ body {
     height: 125px;
     padding-top: 1px;
     border-radius: 5px;
-    background: #1abc9c;
-    color: #2c3e50;
+    color: #bdc3c7;
 	font-size: 36px;
-    text-shadow: 12px 12px 6px rgba(0,0,0,0.3);
 }
             
 #area {
     width: 100%;
     height: 480px;
     padding-top: 0.2px;
-}
-
-i {
-    color:#2c3e50;
-    padding-top:400px;
+    font-size: 20px;
+    color: #333333;
 }
 
 #about {
@@ -48,8 +43,8 @@ i {
   left: 1.5cm;
   padding: 5px;
   border-radius: 5px;
-  border: solid #3498db;
-  background: #3498db;
+  border: solid #2980b9;
+  background: #2980b9;
   box-shadow: 3px 3px 3px #888888;
 }
 
@@ -61,7 +56,7 @@ i {
   width: 0;
   height: 0;
   border-top: 7px solid transparent;
-  border-right: 14px solid #3498db;
+  border-right: 14px solid #2980b9;
   border-bottom: 7px solid transparent;
 }
 
@@ -85,8 +80,8 @@ i {
   right: 3cm;
   padding: 5px;
   border-radius: 5px;
-  border: solid #34495e;
-  background: #34495e;
+  border: solid #16a085;
+  background: #16a085;
   box-shadow: 3px 3px 3px #888888;
 }
 
@@ -98,7 +93,7 @@ i {
   width: 0;
   height: 0;
   border-top: 7px solid transparent;
-  border-left: 14px solid #34495e;
+  border-left: 14px solid #16a085;
   border-bottom: 7px solid transparent;
 }
 
@@ -113,4 +108,29 @@ i {
   padding: 0;
   border: none;
   resize: none;
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-webkit-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
