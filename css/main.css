@@ -1,1 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+
+body {
+  background-color: #D4D9ED;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.background-svg, .container-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container-info {
+  z-index: 2;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 42px;
+  letter-spacing: 2.5px;
+  color: #ecf0f1;
+  text-align: center;
+  padding-right: 16px;
+  margin: 100px;
+}
+
+h1 .info {
+  display: block;
+  color: #ecf0f1;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.box-item {
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+  padding-right: 20px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 600px;
+  height: 100px;
+}
+
+
+#Triangle-2 {
+  -webkit-animation: box2 10s infinite;
+  animation: box2 10s infinite;
+}
+
+#circ {
+    animation: _rotate 8.5s infinite;
+}
+
+@keyframes _rotate {
+    from { transform: rotate(0deg) translateX(125px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(125px) rotate(-360deg); }
+}
+
+@keyframes box2 {
+    from {
+        transform: translate(-600, 200);
+    }
+  50% {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+    to {
+        transform: translate(900, 200)
+    }
+}
+
+.box-item:hover {
+  opacity: 0.6;
+}
+
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-webkit-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
 
