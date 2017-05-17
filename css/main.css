@@ -38,7 +38,7 @@ body {
   width: inherit;
   height: inherit;
   color: #E6E6E6;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   border: none;
@@ -56,14 +56,13 @@ body {
         height: 0px; 
     }
     30%, 100% { 
-        width: 50px; 
+        width: 40px; 
     }
     100% { 
         background: #5D5D5D; 
-        height: 28px; 
+        height: 20px; 
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
     }
 }
 
 }
-
