@@ -1,8 +1,79 @@
 <!doctype html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="jquery.keyframes.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<h2>under construction!</h2>
+    <div class="beginning">
+        <div id="one" class="bubble greeting" style="left:10%;top:5%;"></div>
+        <div id="two" class="bubble" style="left:10%;top:13%;"></div>
+        <div id="three" class="bubble" style="left:10%;top:21%;"></div>
+        <div id="four" class="bubble" style="left:10%;top:35%"></div>
+        <div id="five" class="bubble" style="left:10%;top:46%"></div>
+        <div id="six" class="bubble" style="left:10%;top:54%"></div>
+        <!-- TINTS AND TONES PALETTE
+             GRAPE: #94618E
+             EGGPLANT: #49274A
+             SAND: #F4DECB
+             SHELL: #F8EEE7 -->
+    </div>
+    
+    <script>
+        var count = 0;
+        var timer = 0;
+        var delay = 1;
+        
+        var ids = ["two", "three", "four", "five", "six"];
+        var texts = ["i'm nick.","a developer & designer.","i love building things and learning.",
+                     "also...","JavaScript"];
+        var widths = [70, 175, 190, 45, 100];
+        var heights = [22.5, 22.5, 45, 22.5, 22.5];
+        var delays = [1.2, 1.2, 1.5, 1.5, 1.8, 1.8];
+        
+        timer = setInterval(function() {
+            var textArea = document.createElement("textarea");
+            textArea.textContent = texts[count];
+            textArea.readOnly = true;
+            
+            var color = "#5D5D5D";
+            
+             $.keyframe.define([{
+                name: 'expand' + count,
+                '0%': {
+                    'background': color, 
+                    'width': '0px', 
+                    'height': '0px'
+				},
+			    '30%,100%': {
+					'width': widths[count] + 'px'
+			    },
+			    '100%': {
+                     'background': color, 
+					 'height': heights[count] + 'px'
+			    }
+            }]);
+            
+            $("#" + ids[count]).playKeyframe('expand' + count + ' 0.8s linear ' + delays[count] + 's normal forwards');
+            
+            setTimeout(function() {
+                $("#" + ids[count]).append(textArea);
+                if (count == 4) {
+                    $("#" + ids[count]).append('<i class="fa fa-heart" aria-hidden="true" style="color:#E6E6E6;position:absolute;left:76.5%;top:30.5%;"></i>');
+                }
+                count++;
+                
+                if (count > 5) {
+                    clearInterval(timer);
+                }
+            }, 150); // 50
+        }, 300); //1300
+    </script>
 </body>
 </html>
