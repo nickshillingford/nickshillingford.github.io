@@ -212,6 +212,8 @@ var delays = [0.8, 1, 1.5, 2, 2.3];
 setTimeout(function() {
     var textArea = document.createElement("textarea");
     textArea.style.visibility = "visible";
+    textArea.readOnly = true;
+    textArea.onfocus = this.blur();
     textArea.textContent = "hey!";
     document.getElementById("one").appendChild(textArea);
 }, 1300);
@@ -223,6 +225,7 @@ timer = setInterval(function() {
 function revealBubbles() {
     var textArea = document.createElement("textarea");
     textArea.textContent = texts[count];
+    textArea.onfocus = this.blur();
     textArea.readOnly = true;
             
     $.keyframe.define([{
