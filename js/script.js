@@ -212,8 +212,6 @@ var delays = [0.8, 1, 1.5, 2, 2.3];
 setTimeout(function() {
     var textArea = document.createElement("textarea");
     textArea.style.visibility = "visible";
-    textArea.readOnly = true;
-    textArea.blur();
     textArea.textContent = "hey!";
     document.getElementById("one").appendChild(textArea);
 }, 1300);
@@ -225,8 +223,6 @@ timer = setInterval(function() {
 function revealBubbles() {
     var textArea = document.createElement("textarea");
     textArea.textContent = texts[count];
-    textArea.blur();
-    textArea.readOnly = true;
             
     $.keyframe.define([{
         name: 'expand' + count,
@@ -250,8 +246,6 @@ function revealBubbles() {
         
 setTimeout(function() {
     $("#six").append('<i id="heart" class="fa fa-heart" aria-hidden="true" style="color:#e74c3c;position:absolute;left:77.7%;top:30.5%;"></i>');
-    $("input").blur();
-    $("textarea").blur();
 }, 9850);
         
 function square() {
