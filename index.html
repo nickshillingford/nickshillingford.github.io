@@ -1,12 +1,5 @@
 <!doctype html>
 <html>
-<body>
-	<h1>under construction</h1>
-</body>
-</html>
-<!--
-<!doctype html>
-<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,119 +7,23 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.keyframes.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
     <div class="beginning">
-        <div id="one" class="bubble greeting" style="left:10%;top:5%;"></div>
-        <div id="two" class="bubble" style="left:10%;top:13%;"></div>
-        <div id="three" class="bubble" style="left:10%;top:21%;"></div>
-        <div id="four" class="bubble" style="left:10%;top:35%"></div>
-        <div id="five" class="bubble" style="left:10%;top:46%"></div>
-        <div id="six" class="bubble" style="left:10%;top:54%"></div>
-        <div id="seven" class="bubble" style="left:7.5%;top:80%"></div>
-    </div>
-    
-    <div class="middle">
-        <div id="eight" class="bubble" style="left:7%;top:106%"></div>
-        <div id="nine" class="bubble" style="left:12%;top:119.2%"></div>
-        <div id="ten" class="bubble" style="left:7%;top:132.5%"></div>
-        <div id="eleven" class="bubble" style="left:12%;top:151.5%"></div>
-        <div id="twelve" class="bubble" style="left:7%;top:160%"></div>
-        <div id="thirteen" class="bubble" style="left:7%;top:176%"></div>
-        <div id="fourteen" class="bubble" style="left:7%;top:185%"></div>
+        <div id="one" class="bubble greeting" style="top:18%;"></div>
+        <div id="two" class="bubble" style="top:26%;"></div>
+        <div id="three" class="bubble" style="top:34%;" onclick="playAnimation()"></div>
+        <div id="four" class="bubble" style="top:48%"></div>
+        <div id="five" class="bubble" style="top:59%"></div>
+        <div id="six" class="bubble" style="top:67%" onclick="shake()"></div>
     </div>
     
     <div class="end">
-        <i class="fa fa-github" aria-hidden="true" style="font-size:40px;color:#ecf0f1;padding-left:85px;padding-top:48px;"></i>
-        <i class="fa fa-twitter" aria-hidden="true" style="font-size:40px;color:#ecf0f1;padding-left:105px;padding-top:38px;" ></i>
+        <!-- ADD LINKS TO ICONS -->
+        <i id="email" class="fa fa-envelope" aria-hidden="true" style="font-size:60px;color:#E6E6E6;"></i>
+        <i id="git" class="fa fa-github" aria-hidden="true" style="font-size:61px;color:#E6E6E6;"></i>
+        <i id="twr" class="fa fa-twitter" aria-hidden="true" style="font-size:61px;color:#E6E6E6;"></i>
     </div>
-    
-    <script>
-        var nextSection = false;
-        var threshold = 5;
-        var count = 0;
-        var timer = 0;
-        var delay = 1;
-        
-        var ids = ["two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
-                   "thirteen", "fourteen"];
-        var texts = ["i'm nick.","a developer & designer.","i love building things and learning.",
-                     "also...","JavaScript","","i'm from the Washington, DC area of Fairfax, Virginia.",
-                     "currently a senior in university studying mathematics.",
-                     "i was a teaching assistant at my school, where i tutored coding to students using " +
-                     "the javaScript, java and python languages.","fun fact...","i spent summer 2013 in " +
-                     "New York City as a communications intern for marvel comics.", "thanks so much for " +
-                     "reading this far.", "you can find me elsewhere on the internet below."];
-        
-        var widths = [70, 190, 190, 50, 100, 300, 275, 248, 250, 80, 250, 270, 270];
-        var heights = [22.5, 22.5, 45, 22.5, 22.5, 10, 50, 50, 90, 22.5, 65, 20, 45];
-        var delays = [0.5, 1, 1.5, 2.5, 3, 3.2, 3, 4, 4.3, 4.3, 4.3, 4.3, 4.3];
-        
-        setTimeout(function() {
-            var textArea = document.createElement("textarea");
-            textArea.textContent = "hey!";
-            document.getElementById("one").appendChild(textArea);
-        }, 1000);
-        
-        timer = setInterval(function() {
-            revealBubbles();
-        }, 1200);
-        
-        $(window).scroll(function(event) {
-            scroll = $(window).scrollTop();
-        
-            if ((scroll > 500) && !(nextSection)) {
-                console.log("next section");
-                nextSection = true;
-                
-                timer = setInterval(function() {
-                    revealBubbles();
-                }, 1300);
-            }
-        });
-        
-        function revealBubbles() {
-            var textArea = document.createElement("textarea");
-            textArea.textContent = texts[count];
-            textArea.readOnly = true;
-            
-            var color = "#5D5D5D";
-            
-             $.keyframe.define([{
-                name: 'expand' + count,
-                '0%': {
-                    'background': color, 
-                    'width': '0px', 
-                    'height': '0px'
-				},
-			    '30%,100%': {
-					'width': widths[count] + 'px'
-			    },
-			    '100%': {
-                     'background': color, 
-					 'height': heights[count] + 'px'
-			    }
-            }]);
-            
-            $("#" + ids[count]).playKeyframe('expand' + count + ' 0.8s linear ' + delays[count] + 's normal forwards');
-            
-                $("#" + ids[count]).append(textArea);
-                if (count == 4) {
-                    $("#" + ids[count]).append('<i class="fa fa-heart" aria-hidden="true" style="color:#E6E6E6;position:absolute;left:76.5%;top:30.5%;"></i>');
-                }
-                if (count == 5) {
-                    
-                    $("#" + ids[count]).append('<i class="fa fa-angle-double-down" aria-hidden="true" style="font-size:32px;color:#E6E6E6;position:absolute;left:46%;top:0%;"></i>');
-                }
-                count++;
-                
-                if (count > threshold) {
-                    clearInterval(timer);
-                    threshold = 20;
-                }
-        }
-    </script>
 </body>
 </html>
--->
