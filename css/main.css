@@ -54,12 +54,17 @@
         position: inherit;
         width: inherit;
         height: inherit;
-        color: rgb(75,75,75);
+        color: transparent;
+        text-shadow : 0 0 0 rgb(75, 75, 75);
         font-size: 18px;
         margin: 0;
         padding: 0;
         border: none;
         resize: none;
+    }
+    
+    .bubble textarea:focus {
+        outline: none;
     }
   
     /* PUT THIS ANIMATION INTO JQUERY KEYFRAMES INSTEAD */
