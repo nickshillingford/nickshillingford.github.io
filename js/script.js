@@ -201,29 +201,23 @@ var x = 0;
 
 var ids = ["two", "three", "four", "five", "six"];
 var strs = ['Music','Fitness','Geometry','Outdoors','New York','JavaScript'];
-var texts = ["i'm nick.","a developer & designer.","i love building stuff and learning new things.",
-             "also...","JavaScript"];
+var texts = ["name", "info", "love", "also", "interest"];
 
 var ls = [6.5, 4, 0.5, 1.3, 0.5, 0];
-var widths = [70, 190, 190, 50, 100];
-var heights = [22.5, 22.5, 45, 22.5, 22.5];
+var widths = [100, 250, 250, 75, 160];
+var heights = [30, 30, 50, 30, 30];
 var delays = [0.8, 1, 1.5, 2, 2.3];
         
 setTimeout(function() {
-    var textArea = document.createElement("textarea");
-    textArea.style.visibility = "visible";
-    textArea.textContent = "hey!";
-    document.getElementById("one").appendChild(textArea);
-}, 1300);
+    $("#greet").css("visibility", "visible");
+}, 1500);//1500
         
 timer = setInterval(function() {
     revealBubbles();
-}, 1300);
+}, 1500);//1500
         
 function revealBubbles() {
-    var textArea = document.createElement("textarea");
-    textArea.textContent = texts[count];
-            
+      
     $.keyframe.define([{
         name: 'expand' + count,
         '0%': {'background': "#D2D7D3",'width': '0px','height': '0px'},
@@ -234,19 +228,23 @@ function revealBubbles() {
     $("#" + ids[count]).playKeyframe({
         name: 'expand' + count,duration: '0.8s',timingFunction: 'linear', 
         delay: delays[count] + 's',direction: 'normal',fillMode: 'forwards',
-        complete: function(){textArea.style.visibility = "visible";}
+        complete: function() {
+            $("#" + texts[0]).css("visibility", "visible");
+            texts.shift();
+        }
     });
-            
-    $("#" + ids[count]).append(textArea);
+
     count++;
-    if (count > 5) {
+    
+    // count > 5
+    if (count > 4) {
         clearInterval(timer);
     }
 }
         
 setTimeout(function() {
-    $("#six").append('<i id="heart" class="fa fa-heart" aria-hidden="true" style="color:#e74c3c;position:absolute;left:77.7%;top:30.5%;"></i>');
-}, 9850);
+    $("#heart").css("visibility", "visible");
+}, 10600);
         
 function square() {
     $("#heart").css("visibility", "hidden");
