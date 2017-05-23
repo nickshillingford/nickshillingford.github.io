@@ -4,6 +4,69 @@
         margin: 0;
     }
     
+    #greet {
+        visibility: hidden;
+        position: absolute;
+        top: -25%;
+        left: 25%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #name {
+        visibility: hidden;
+        position: absolute;
+        top: -28%;
+        left: 14%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #info {
+        visibility: hidden;
+        position: absolute;
+        top: -30%;
+        left: 5%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #love {
+        visibility: hidden;
+        position: absolute;
+        top: -25%;
+        left: 5%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #also {
+        visibility: hidden;
+        position: absolute;
+        top: -25%;
+        left: 20%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #interest {
+        visibility: hidden;
+        position: absolute;
+        top: -25%;
+        left: 10%;
+        font-size: 25px;
+        color: rgb(75,75,75);
+    }
+    
+    #heart {
+        position: absolute;
+        visibility: hidden;
+        top: 21%;
+        left: 75%;
+        font-size: 30px;
+        color: #EA4335;
+    }
+    
     #email {
         position: absolute;
         cursor: pointer;
@@ -43,30 +106,9 @@
         color: #E6E6E6;
         padding: 10px;
         border-radius: 3px;
-        left: 23%;
-    }
-
-    .bubble textarea {
-        visibility: hidden;
-        font-family: serif;
-        overflow: hidden;
-        background: transparent;
-        position: inherit;
-        width: inherit;
-        height: inherit;
-        color: transparent;
-        text-shadow : 0 0 0 rgb(75, 75, 75);
-        font-size: 18px;
-        margin: 0;
-        padding: 0;
-        border: none;
-        resize: none;
+        left: 12%;
     }
     
-    .bubble textarea:focus {
-        outline: none;
-    }
-  
     /* PUT THIS ANIMATION INTO JQUERY KEYFRAMES INSTEAD */
     /* DONT FORGET TO ADD MOZ KEYFRAMES*/
     .greeting { 
@@ -80,11 +122,13 @@
             height: 0px; 
         }
         30%, 100% { 
-            width: 40px; 
+            width: 70px; 
         }
         100% { 
             background:  #D2D7D3; 
-            height: 20px; 
+            height: 30px; 
         }
     }     
 }
+
+   
