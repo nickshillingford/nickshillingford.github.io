@@ -4,40 +4,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <div class="beginning">
-        <div id="one" class="bubble greeting" style="top:10%;">
-            <p id="greet">hey!</p>
+        <div id="one" class="bubble" style="top:10%;">
+            <p id="greet" class="text">hey!</p>
         </div>
         <div id="two" class="bubble" style="top:20%;">
-            <p id="name">i'm nick.</p>
+            <p id="name" class="text">i'm nick.</p>
         </div>
         <div id="three" class="bubble" style="top:30%;"> <!--onclick="playAnimation()"-->
-            <p id="info">a developer and designer.</p>
+            <p id="info" class="text">a developer and designer.</p>
         </div>
         
         <div id="four" class="bubble" style="top:50%">
-            <p id="love">i love building stuff and<br>learning new things.</p>
+            <p id="love" class="text">i love building stuff and<br>learning new things.</p>
         </div>
         <div id="five" class="bubble" style="top:64%">
-            <p id="also">also...</p>
+            <p id="also" class="text">also...</p>
         </div>
         <div id="six" class="bubble" style="top:75%"> <!--onclick="shake()"-->
-            <p id="interest">JavaScript</p>
+            <p id="interest" class="text">JavaScript</p>
             <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
         </div>
     </div>
     
     <div class="end">
+        <div id="social">
+            <i id="email" class="fa fa-envelope" aria-hidden="true" style="font-size:56px;color:rgb(75,75,75);visibility:hidden;position:absolute;"></i>
+            <i id="git" class="fa fa-github" aria-hidden="true" style="font-size:58px;color:rgb(75,75,75);visibility:hidden;position:absolute;"></i>
+            <i id="twr" class="fa fa-twitter" aria-hidden="true" style="font-size:58px;color:rgb(75,75,75);visibility:hidden;position:absolute;"></i>
+        </div>
         <!-- ADD LINKS TO ICONS -->
-        <i id="email" class="fa fa-envelope" aria-hidden="true" style="font-size:56px;color:#E6E6E6;"></i>
-        <i id="git" class="fa fa-github" aria-hidden="true" style="font-size:61px;color:#E6E6E6;"></i>
-        <i id="twr" class="fa fa-twitter" aria-hidden="true" style="font-size:61px;color:#E6E6E6;"></i>
     </div>
 </body>
 </html>
