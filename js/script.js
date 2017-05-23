@@ -207,7 +207,11 @@ var ls = [6.5, 4, 0.5, 1.3, 0.5, 0];
 var widths = [100, 270, 250, 75, 160];
 var heights = [30, 30, 50, 30, 30];
 var delays = [0.8, 1, 1.5, 2, 2.3];
-        
+
+setTimeout(function() {
+    $("#one").playKeyframe('greeting 1s ease-in-out 0.5s normal forwards');
+}, 100);
+
 setTimeout(function() {
     $("#greet").css("visibility", "visible");
 }, 1500);//1500
@@ -220,9 +224,11 @@ function revealBubbles() {
       
     $.keyframe.define([{
         name: 'expand' + count,
-        '0%': {'background': "#D2D7D3",'width': '0px','height': '0px'},
+        '0%': {'background': "#D2D7D3",'width': '0px','height': '0px',
+               'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'},
         '30%,100%': {'width': widths[count] + 'px'},
-        '100%': {'background': "#D2D7D3",'height': heights[count] + 'px'}
+        '100%': {'background': "#D2D7D3",'height': heights[count] + 'px',
+                 'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'}
     }]);
             
     $("#" + ids[count]).playKeyframe({
@@ -453,6 +459,12 @@ $.keyframe.define([{ 'name': 'spin6',
 }]);
 
 $.keyframe.define([{
+    'name': 'dropdown',
+    '0%': {'background':'#D2D7D3','height':'0vh','width':'80%','border-radius':'2px','box-shadow':'0px 1px 5px rgba(0,0,0,0.2)'},
+    '100%': {'background':'#D2D7D3','height':'90vh','width':'80%','border-radius':'2px','box-shadow':'0px 1px 5px rgba(0,0,0,0.2)'}
+}]);
+
+$.keyframe.define([{
     'name': 'shake',
     '0%': {'left': '23%','width':'100px','height':'22.5px','background':ogColor},
     '10%': {'left': '30%'},'20%': {'left': '21%'},'30%': {'left': '30%'},
@@ -460,6 +472,27 @@ $.keyframe.define([{
     '70%': {'left': '30%'},'80%': {'left': '21%'},'90%': {'left': '30%'},
     '100%': {'left': '23%','width':'100px','height':'22.5px','background':ogColor}
 }]);
+
+$.keyframe.define([{
+    'name': 'greeting',
+    '0%': {'background':'#D2D7D3','width':'0px','height':'0px',
+           'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'},
+    '30%,100%': {'width':'70px'},
+    '100%': {'background':'#D2D7D3','height':'30px',
+             'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'}
+}]);
+
+$(window).scroll(function(event) {
+    var scroll = $(window).scrollTop();
+    if (scroll > 500) {
+        $("#social").playKeyframe('dropdown 0.8s ease-in-out 0s normal forwards');
+        setTimeout(function() {
+             $("#email").css("visibility", "visible");$("#email").css("top", "10%");$("#email").css("left", "39%");
+             $("#git").css("visibility", "visible");$("#git").css("top", "45%");$("#git").css("left", "40%");
+             $("#twr").css("visibility", "visible");$("#twr").css("top", "80%");$("#twr").css("left", "40%");
+        }, 800);
+    }
+});
 
 function shake() {
     $("#six").playKeyframe({name: 'shake', duration: '0.5s', timingFunction: 'ease-in-out', 
