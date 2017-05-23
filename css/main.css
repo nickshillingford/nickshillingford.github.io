@@ -1,61 +1,42 @@
-@media screen and (min-width:320px) and (max-width:500px) {
+@media screen and (min-width:350px) and (max-width:500px) {
     body {
-        padding: 0;
-        margin: 0;
+        background: #E6E6E6;
     }
     
     #greet {
-        visibility: hidden;
-        position: absolute;
         top: -25%;
         left: 25%;
-        font-size: 25px;
-        color: rgb(75,75,75);
     }
     
     #name {
-        visibility: hidden;
-        position: absolute;
         top: -28%;
         left: 14%;
-        font-size: 25px;
-        color: rgb(75,75,75);
     }
     
     #info {
-        visibility: hidden;
-        position: absolute;
         top: -30%;
         left: 5%;
-        font-size: 25px;
-        color: rgb(75,75,75);
     }
     
     #love {
-        visibility: hidden;
-        position: absolute;
         top: -25%;
         left: 5%;
-        font-size: 25px;
-        color: rgb(75,75,75);
     }
     
     #also {
-        visibility: hidden;
-        position: absolute;
         top: -25%;
         left: 20%;
-        font-size: 25px;
-        color: rgb(75,75,75);
     }
     
     #interest {
-        visibility: hidden;
-        position: absolute;
         top: -25%;
         left: 10%;
-        font-size: 25px;
-        color: rgb(75,75,75);
+    }
+    
+    #social {
+        position: absolute;
+        top: 105%;
+        left: 10%;
     }
     
     #heart {
@@ -66,28 +47,7 @@
         font-size: 30px;
         color: #EA4335;
     }
-    
-    #email {
-        position: absolute;
-        cursor: pointer;
-        top: 113%;
-        left: 41%;
-    }
-    
-    #git {
-        position: absolute;
-        cursor: pointer;
-        top: 145%;
-        left: 41%;
-    }
-    
-    #twr {
-        position: absolute;
-        cursor: pointer;
-        top: 177%;
-        left: 41%;
-    }
-
+   
     .beginning {
         background: #E6E6E6;
         width: 100%;
@@ -95,7 +55,6 @@
     }
     
     .end {
-        background: rgb(75,75,75);
         width: 100%;
         height: 100vh;
     }
@@ -105,30 +64,14 @@
         position: absolute;
         color: #E6E6E6;
         padding: 10px;
-        border-radius: 3px;
+        border-radius: 2px;
         left: 12%;
     }
     
-    /* PUT THIS ANIMATION INTO JQUERY KEYFRAMES INSTEAD */
-    /* DONT FORGET TO ADD MOZ KEYFRAMES*/
-    .greeting { 
-        animation: greeting 1s ease-in-out 0.5s normal forwards; 
+    .text {
+        position: absolute;
+        visibility: hidden;
+        color: rgb(75,75,75);
+        font-size: 25px;
     }
-
-    @keyframes greeting {
-        0% { 
-            background: #D2D7D3; 
-            width: 0px; 
-            height: 0px; 
-        }
-        30%, 100% { 
-            width: 70px; 
-        }
-        100% { 
-            background:  #D2D7D3; 
-            height: 30px; 
-        }
-    }     
 }
-
-   
