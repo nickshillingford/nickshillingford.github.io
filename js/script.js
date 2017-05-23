@@ -204,7 +204,7 @@ var strs = ['Music','Fitness','Geometry','Outdoors','New York','JavaScript'];
 var texts = ["name", "info", "love", "also", "interest"];
 
 var ls = [6.5, 4, 0.5, 1.3, 0.5, 0];
-var widths = [100, 250, 250, 75, 160];
+var widths = [100, 270, 250, 75, 160];
 var heights = [30, 30, 50, 30, 30];
 var delays = [0.8, 1, 1.5, 2, 2.3];
         
