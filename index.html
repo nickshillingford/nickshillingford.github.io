@@ -1,7 +1,75 @@
 <!doctype html>
 <html>
- <!-- don't forget css/main.css and js/script.js -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/segment-js/1.0.8/segment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="js/d3-ease.v0.6.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/letters.js"></script>
+</head>
 <body>
-    <h1>under construction!</h1>
+    <div class="top">
+        <div id="card">
+            <div id="nContainer" class="container">
+                <div id="n">n</div>
+            </div>
+            
+            <div id="iContainer" class="container">
+                <div id="i">i</div>
+                <div id="dot"></div>
+            </div>
+            
+            <div id="cContainer" class="container">
+                <div id="c">c</div>
+            </div>
+            
+            <div id="kContainer" class="container">
+                <div id="k">k</div>
+            </div>
+        </div>
+        
+        <div id="love" onclick="slide()">
+            <p id="I">i</p> 
+            <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+        
+        <div id="trait" onclick="shake()">
+            <p id="I">i</p>
+            <p id="am">am</p>
+        </div>
+    </div>
+    
+    <div class="bottom">
+        <i id="email" class="fa fa-envelope" aria-hidden="true"></i>
+        <i id="github" class="fa fa-github" aria-hidden="true"></i>
+        <i id="twitter" class="fa fa-twitter" aria-hidden="true"></i>
+    </div>
+    
+    <script>
+        var letters = [$("#n").get(0), $("#i").get(0), $("#c").get(0), $("#k").get(0)];
+        var animatedLetters = [];
+        var letterOptions = [];
+        
+        var sizes = [175, 175, 185, 178];
+        var delays = [0, 0.2, 0.4, 0.6];
+       
+        for (var x = 0; x < letters.length; x++) {
+            letterOptions.push({
+                size: sizes[x],weight: 5,rounded: false, color: '#ecf0f1', duration: 1,       
+                delay: [delays[x], 0],fade: 0.5,easing: d3_ease.easeSinIn.ease,   
+                individualDelays: false 
+            });
+        }
+        
+        for (var y = 0; y < letters.length; y++ ) {
+            animatedLetters.push(new Letters(letters[y], letterOptions[y]));
+            animatedLetters[y].show();
+        }
+    </script>
 </body>
 </html>
