@@ -186,328 +186,44 @@
 }).call(this);
 // END OF JQUERY KEYFRAMES LIBRARY
 
-const ogColor = "#D2D7D3"; 
-const minTop = 35; 
-const maxTop = 60; 
-const minLeft = 25;
-const midLeft = 45;
-const maxLeft = 65;
-
-var count = 0;
-var timer = 0;
-var delay = 1;
-var pos = 0;
-var x = 0;
-
-var ids = ["two", "three", "four", "five", "six"];
-var strs = ['Music','Fitness','Geometry','Outdoors','New York','JavaScript'];
-var texts = ["name", "info", "love", "also", "interest"];
-
-var ls = [6.5, 4, 0.5, 1.3, 0.5, 0];
-var widths = [100, 270, 250, 75, 160];
-var heights = [30, 30, 50, 30, 30];
-var delays = [0.8, 1, 1.5, 2, 2.3];
-
-setTimeout(function() {
-    $("#one").playKeyframe('greeting 1s ease-in-out 0.5s normal forwards');
-}, 100);
-
-setTimeout(function() {
-    $("#greet").css("visibility", "visible");
-}, 1500);//1500
-        
-timer = setInterval(function() {
-    revealBubbles();
-}, 1500);//1500
-        
-function revealBubbles() {
-      
-    $.keyframe.define([{
-        name: 'expand' + count,
-        '0%': {'background': "#D2D7D3",'width': '0px','height': '0px',
-               'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'},
-        '30%,100%': {'width': widths[count] + 'px'},
-        '100%': {'background': "#D2D7D3",'height': heights[count] + 'px',
-                 'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'}
-    }]);
-            
-    $("#" + ids[count]).playKeyframe({
-        name: 'expand' + count,duration: '0.8s',timingFunction: 'linear', 
-        delay: delays[count] + 's',direction: 'normal',fillMode: 'forwards',
-        complete: function() {
-            $("#" + texts[0]).css("visibility", "visible");
-            texts.shift();
-        }
-    });
-
-    count++;
-    
-    // count > 5
-    if (count > 4) {
-        clearInterval(timer);
-    }
-}
-        
-setTimeout(function() {
-    $("#heart").css("visibility", "visible");
-}, 10600);
-        
-function square() {
-    $("#heart").css("visibility", "hidden");
-    $("#one").playKeyframe('square1 3s ease-in-out 0s normal forwards');
-    $("#two").playKeyframe('square2 3s ease-in-out 0s normal forwards');
-    $("#three").playKeyframe('square3 3s ease-in-out 0s normal forwards');
-    $("#four").playKeyframe('square4 3s ease-in-out 0s normal forwards');
-    $("#five").playKeyframe('square5 3s ease-in-out 0s normal forwards');
-    $("#six").playKeyframe({name: 'square6', duration: '3s', timingFunction: 'ease-in-out', 
-                            delay: '0s', direction: 'normal', fillMode: 'forwards',
-                            complete: function() {$("#heart").css("visibility", "visible");}});
-}
-
-function spin() {
-    $("#heart").css("visibility", "hidden");
-    $("#one").playKeyframe('spin1 5s ease-in-out 0s normal forwards');
-    $("#two").playKeyframe('spin2 5.1s ease-in-out 0s normal forwards');
-    $("#three").playKeyframe('spin3 5.05s ease-in-out 0s normal forwards');
-    $("#four").playKeyframe('spin4 5.15s ease-in-out 0s normal forwards');
-    $("#five").playKeyframe('spin5 5s ease-in-out 0s normal forwards');
-    $("#six").playKeyframe({name: 'spin6', duration: '5.05s', timingFunction: 'ease-in-out', 
-                            delay: '0s', direction: 'normal', fillMode: 'forwards',
-                            complete: function() {$("#heart").css("visibility", "visible")}});
-}
-
-function playAnimation() {
-    ((x % 2) == 0) ? square() : spin();
-    x++;
-}
-
-/*SQUARE ANIMATION*/
-        $.keyframe.define([ { name: 'square1', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '40px','height': '20px','top':'18%','left':'23%'},
-                              '20%': {'background': '#1abc9c','border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '30%': {'top':minTop+'%','left':midLeft+'%'},
-                              '40%': {'top':minTop+'%','left':maxLeft+'%'},
-                              '50%': {'top':maxTop+'%','left':maxLeft+'%'},
-                              '60%': {'top':maxTop+'%','left':midLeft+'%'},
-                              '70%': {'top':maxTop+'%','left':minLeft+'%'},
-                              '80%': {'background': '#1abc9c','border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '40px', 'height': '20px','top':'18%','left':'23%'}
-                            } ]);
-        
-        $.keyframe.define([ { name: 'square2', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '70px','height': '22.5px','top':'26%','left':'23%'},
-                              '20%': {'background': '#34495e','border-radius': '100px','width': '1px','height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '30%': {'border-radius': '100px','width': '1px','height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '40%': {'border-radius': '100px','width': '1px','height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '50%': {'border-radius': '100px','width': '1px','height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '60%': {'border-radius': '100px','width': '1px','height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '70%': {'border-radius': '100px','width': '1px','height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '80%': {'background': '#34495e','border-radius': '100px','width': '1px','height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '70px', 'height': '22.5px','top':'26%','left':'23%'} 
-                            } ]);
-        
-        $.keyframe.define([ { name: 'square3', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '190px','height': '22.5px','top':'34%','left':'23%'},
-                              '20%': {'background': '#e67e22','border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '30%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '40%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '50%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '60%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '70%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '80%': {'background': '#e67e22','border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '190px', 'height': '22.5px','top':'34%','left':'23%'}
-                            } ]);
-        
-        $.keyframe.define([ { name: 'square4', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '190px','height': '45px','top':'48%','left':'23%'},
-                              '20%': {'background': '#34495e','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '30%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '40%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '50%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '60%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '70%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '80%': {'background': '#34495e','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '190px', 'height': '45px','top':'48%','left':'23%'}
-                            } ]);
-        
-        $.keyframe.define([ { name: 'square5', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '50px','height': '22.5px','top':'59%','left':'23%'},
-                              '20%': {'background': '#9b59b6','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '30%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '40%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '50%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '60%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '70%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '80%': {'background': '#9b59b6','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '50px', 'height': '22.5px','top':'59%','left':'23%'}
-                            } ]);
-        
-        $.keyframe.define([ { name: 'square6', 
-                              '0%': {'background': ogColor,'border-radius': '3px','width': '100px','height': '22.5px','top':'67%','left':'23%'},
-                              '20%': {'background': '#1abc9c','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '30%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':midLeft+'%'},
-                              '40%': {'border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':minLeft+'%'},
-                              '50%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':minLeft+'%'},
-                              '60%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':midLeft+'%'},
-                              '70%': {'border-radius': '100px','width': '1px', 'height': '1px','top':minTop+'%','left':maxLeft+'%'},
-                              '80%': {'background': '#1abc9c','border-radius': '100px','width': '1px', 'height': '1px','top':maxTop+'%','left':maxLeft+'%'},
-                              '100%': {'background': ogColor,'border-radius': '3px','width': '100px', 'height': '22.5px','top':'67%','left':'23%'}
-                            } ]);
-/*SQUARE ANIMATION*/
-
-/* SPIN ANIMATION*/
-$.keyframe.define([{ 'name': 'spin1',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'40px','height':'20px','top':'18%','left':'23%'},
-                     '5%': {'background':'#4285F4','border-radius':'100px','width':'1px','height':'1px','top':'24%','left':'45%'},
-                     '10%': {'transform':'translate(-25px)'},
-                     '20%': {'transform':'translate(25px)'},
-                     '30%': {'transform':'translate(-25px)'},
-                     '40%': {'transform':'translate(25px)'},
-                     '50%': {'transform':'translate(-25px)'},
-                     '60%': {'transform':'translate(25px)'},
-                     '70%': {'transform':'translate(-25px)'},
-                     '80%': {'transform':'translate(25px)'},
-                     '90%': {'transform':'translate(-25px)'},
-                     '95%': {'background':'#4285F4','border-radius':'100px','width':'1px','height':'1px','top':'24%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'40px','height': '20px','top':'18%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{ 'name': 'spin2',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'70px','height':'22.5px','top':'26%','left':'23%'},
-                     '5%': {'background':'#EA4335','border-radius':'100px','width':'1px','height':'1px','top':'34%','left':'45%'},
-                     '10%': {'transform':'translate(50px)'},
-                     '20%': {'transform':'translate(-50px)'},
-                     '30%': {'transform':'translate(50px)'},
-                     '40%': {'transform':'translate(-50px)'},
-                     '50%': {'transform':'translate(50px)'},
-                     '60%': {'transform':'translate(-50px)'},
-                     '70%': {'transform':'translate(50px)'},
-                     '80%': {'transform':'translate(-50px)'},
-                     '90%': {'transform':'translate(50px)'},
-                     '95%': {'background':'#EA4335','border-radius':'100px','width':'1px','height':'1px','top':'34%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'70px','height': '22.5px','top':'26%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{ 'name': 'spin3',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'190px','height':'22.5px','top':'34%','left':'23%'},
-                     '5%': {'background':'#FBBC05','border-radius':'100px','width':'1px','height':'1px','top':'44%','left':'45%'},
-                     '10%': {'transform':'translate(-35px)'},
-                     '20%': {'transform':'translate(35px)'},
-                     '30%': {'transform':'translate(-35px)'},
-                     '40%': {'transform':'translate(35px)'},
-                     '50%': {'transform':'translate(-35px)'},
-                     '60%': {'transform':'translate(35px)'},
-                     '70%': {'transform':'translate(-35px)'},
-                     '80%': {'transform':'translate(35px)'},
-                     '90%': {'transform':'translate(-35px)'},
-                     '95%': {'background':'#FBBC05','border-radius':'100px','width':'1px','height':'1px','top':'44%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'190px','height': '22.5px','top':'34%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{ 'name': 'spin4',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'190px','height':'45px','top':'48%','left':'23%'},
-                     '5%': {'background':'#4285F4','border-radius':'100px','width':'1px','height':'1px','top':'54%','left':'45%'},
-                     '10%': {'transform':'translate(36px)'},
-                     '20%': {'transform':'translate(-36px)'},
-                     '30%': {'transform':'translate(36px)'},
-                     '40%': {'transform':'translate(-36px)'},
-                     '50%': {'transform':'translate(36px)'},
-                     '60%': {'transform':'translate(-36px)'},
-                     '70%': {'transform':'translate(36px)'},
-                     '80%': {'transform':'translate(-36px)'},
-                     '90%': {'transform':'translate(36px)'},
-                     '95%': {'background':'#4285F4','border-radius':'100px','width':'1px','height':'1px','top':'54%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'190px','height': '45px','top':'48%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{ 'name': 'spin5',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'50px','height':'22.5px','top':'59%','left':'23%'},
-                     '5%': {'background':'#34A853','border-radius':'100px','width':'1px','height':'1px','top':'64%','left':'45%'},
-                     '10%': {'transform':'translate(-25px)'},
-                     '20%': {'transform':'translate(25px)'},
-                     '30%': {'transform':'translate(-25px)'},
-                     '40%': {'transform':'translate(25px)'},
-                     '50%': {'transform':'translate(-25px)'},
-                     '60%': {'transform':'translate(25px)'},
-                     '70%': {'transform':'translate(-25px)'},
-                     '80%': {'transform':'translate(25px)'},
-                     '90%': {'transform':'translate(-25px)'},
-                     '95%': {'background':'#34A853','border-radius':'100px','width':'1px','height':'1px','top':'64%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'50px','height': '22.5px','top':'59%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{ 'name': 'spin6',
-                     '0%': {'background':ogColor,'border-radius':'3px','width':'100px','height':'22.5px','top':'67%','left':'23%'},
-                     '5%': {'background':'#EA4335','border-radius':'100px','width':'1px','height':'1px','top':'74%','left':'45%'},
-                     '10%': {'transform':'translate(20px)'},
-                     '20%': {'transform':'translate(-20px)'},
-                     '30%': {'transform':'translate(20px)'},
-                     '40%': {'transform':'translate(-20px)'},
-                     '50%': {'transform':'translate(20px)'},
-                     '60%': {'transform':'translate(-20px)'},
-                     '70%': {'transform':'translate(20px)'},
-                     '80%': {'transform':'translate(-20px)'},
-                     '90%': {'transform':'translate(20px)'},
-                     '95%': {'background':'#EA4335','border-radius':'100px','width':'1px','height':'1px','top':'74%','left':'45%'},
-                     '100%': {'background':ogColor,'border-radius':'3px','width':'100px','height': '22.5px','top':'67%','left':'23%'}
-    
-}]);
-
-$.keyframe.define([{
-    'name': 'dropdown',
-    '0%': {'background':'#D2D7D3','height':'0vh','width':'80%','border-radius':'2px','box-shadow':'0px 1px 5px rgba(0,0,0,0.2)'},
-    '100%': {'background':'#D2D7D3','height':'90vh','width':'80%','border-radius':'2px','box-shadow':'0px 1px 5px rgba(0,0,0,0.2)'}
-}]);
-
 $.keyframe.define([{
     'name': 'shake',
-    '0%': {'left': '23%','width':'100px','height':'22.5px','background':ogColor},
-    '10%': {'left': '30%'},'20%': {'left': '21%'},'30%': {'left': '30%'},
-    '40%': {'left': '21%'},'50%': {'left': '30%'},'60%': {'left': '21%'},
-    '70%': {'left': '30%'},'80%': {'left': '21%'},'90%': {'left': '30%'},
-    '100%': {'left': '23%','width':'100px','height':'22.5px','background':ogColor}
+    '0%': {'left': '7.5%','width':'85%','height':'10%'},
+    '10%': {'left': '14%'},'20%': {'left': '7%'},'30%': {'left': '14%'},
+    '40%': {'left': '7%'},'50%': {'left': '14%'},'60%': {'left': '7%'},
+    '70%': {'left': '14%'},'80%': {'left': '7%'},'90%': {'left': '14%'},
+    '100%': {'left': '7.5%','width':'85%','height':'10%'}
 }]);
 
 $.keyframe.define([{
-    'name': 'greeting',
-    '0%': {'background':'#D2D7D3','width':'0px','height':'0px',
-           'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'},
-    '30%,100%': {'width':'70px'},
-    '100%': {'background':'#D2D7D3','height':'30px',
-             'box-shadow': '0px 1px 5px rgba(0,0,0,0.2)'}
+    'name': 'slide',
+    '0%': {'top': '67%'},
+    '50%': {'top': '40%'},
+    '100%': {'top': '67%'}
 }]);
 
-$(window).scroll(function(event) {
-    var scroll = $(window).scrollTop();
-    if (scroll > 500) {
-        $("#social").playKeyframe('dropdown 0.8s ease-in-out 0s normal forwards');
-        setTimeout(function() {
-             $("#email").css("visibility", "visible");$("#email").css("top", "10%");$("#email").css("left", "39%");
-             $("#git").css("visibility", "visible");$("#git").css("top", "45%");$("#git").css("left", "40%");
-             $("#twr").css("visibility", "visible");$("#twr").css("top", "80%");$("#twr").css("left", "40%");
-        }, 800);
-    }
-});
-
 function shake() {
-    $("#six").playKeyframe({name: 'shake', duration: '0.5s', timingFunction: 'ease-in-out', 
+    $("#trait").playKeyframe({name: 'shake', duration: '0.5s', timingFunction: 'ease-in-out', 
                             delay: '0s', direction: 'normal', fillMode: 'forwards',
                             complete: function() {
                                 $(this).resetKeyframe();
-                                $(this).css("width", "100px");
-                                $(this).css("height", "22.5px");
-                                $(this).css("backgroundColor", ogColor);
+                                //$(this).css("width", "85%");
+                                //$(this).css("height", "10%");
+                                //$(this).css("backgroundColor", ogColor);
                             }});
-    
+    //document.getElementById("six").childNodes[0].textContent = strs[pos];
+    //document.getElementById("six").childNodes[0].style.letterSpacing = ls[pos] + 'px';
+    //pos++;
+    //(pos == 6) ? pos = 0 : pos = pos;
+}
 
-    document.getElementById("six").childNodes[0].textContent = strs[pos];
-    document.getElementById("six").childNodes[0].style.letterSpacing = ls[pos] + 'px';
-    
-    pos++;
-    (pos == 6) ? pos = 0 : pos = pos;
+function slide() {
+    $("#love").playKeyframe({name: 'slide', duration: '1s', timingFunction: 'ease-in-out', 
+                            delay: '0s', direction: 'normal', fillMode: 'forwards',
+                            complete: function() {
+                                $(this).resetKeyframe();
+                                //$(this).css("width", "85%");
+                                //$(this).css("height", "10%");
+                                //$(this).css("backgroundColor", ogColor);
+                            }});
 }
