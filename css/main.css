@@ -1,77 +1,164 @@
 @media screen and (min-width:320px) and (max-width:500px) {
     body {
-        background: #E6E6E6;
+        padding: 0;
+        margin: 0;
+    }
+
+    .top {
+        background: #ecf0f1;
+        width: 100%;
+        height: 100vh;
     }
     
-    #greet {
-        top: -25%;
-        left: 25%;
+    .bottom {
+        background: #ecf0f1;
+        width: 100%;
+        height: 100vh;
     }
     
-    #name {
-        top: -28%;
-        left: 14%;
-    }
-    
-    #info {
-        top: -30%;
-        left: 5%;
-    }
-    
-    #love {
-        top: -25%;
-        left: 5%;
-    }
-    
-    #also {
-        top: -25%;
-        left: 20%;
-    }
-    
-    #interest {
-        top: -25%;
-        left: 10%;
-    }
-    
-    #social {
+    .container {
         position: absolute;
-        top: 105%;
+        border-radius: 100px;
+        height: 110px;
+        width: 110px;
+    }
+
+    #card {
+        background: #ecf0f1;
+        position: absolute;
+        top: 8%;
+        left: 2.3%;
+        width: 95%;
+        height: 50%;
+        z-index: 1;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    #nContainer {
+        top: 6%;
+        left: 5%;
+        background: #4285f4;
+    }
+
+    #iContainer {
+        top: 6%;
+        left: 60%;
+        background: #ea4335;
+    }
+
+    #cContainer {
+        top: 60%;
+        left: 5%;
+        background: #fbbc05;
+    }
+
+    #kContainer {
+        top: 60%;
+        left: 60%;
+        background: #34a853;
+    }
+
+    #n {
+        position: absolute;
+        top: -28.5%;
+        left: 16%;
+    }
+
+    #i {
+        position: absolute;
+        top: -18%;
+        left: 42%;
+    }
+
+    #c {
+        position: absolute;
+        top: -34%;
         left: 10%;
+    }
+
+    #k {
+        position: absolute;
+        top: -22%;
+        left: 12%;
+    }
+    
+    #I {
+        font-family: serif;
+        font-size: 40px;
+        position: absolute;
+        top: -42%;
+        left: 8%;
+        color: #95a5a6;
+    }
+    
+    #am {
+        font-family: serif;
+        font-size: 36px;
+        position: absolute;
+        top: -30%;
+        left: 16%;
+        color: #95a5a6;
+    }
+    
+    #dot {
+        position: absolute;
+        top: 5%;
+        left: 46%;
+        height: 8px;
+        width: 8px;
+        border-radius: 100px;
+        background: #ecf0f1;
+    }
+
+    #love {
+       position: absolute;
+       background: #ecf0f1;
+       top: 67%;
+       left: 7.5%;
+       width: 85%;
+       height: 10%;
+       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+    
+    #trait {
+        position: absolute;
+        background: #ecf0f1;
+        top: 85%;
+        left: 7.5%;
+        width: 85%;
+        height: 10%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     }
     
     #heart {
         position: absolute;
-        visibility: hidden;
-        top: 21%;
-        left: 75%;
-        font-size: 30px;
-        color: #EA4335;
-    }
-   
-    .beginning {
-        background: #E6E6E6;
-        width: 100%;
-        height: 100vh;
+        top: 30%;
+        left: 20%;
+        font-size: 32px;
+        color: #ea4335;
     }
     
-    .end {
-        width: 100%;
-        height: 100vh;
-    }
- 
-    .bubble {
-        background: #E6E6E6;
+    #email {
         position: absolute;
-        color: #E6E6E6;
-        padding: 10px;
-        border-radius: 2px;
-        left: 12%;
+        top: 114%;
+        left: 39%;
+        font-size: 60px;
+        color: #bdc3c7;
     }
     
-    .text {
+    #github {
         position: absolute;
-        visibility: hidden;
-        color: rgb(75,75,75);
-        font-size: 25px;
+        top: 144%;
+        left: 40%;
+        font-size: 65px;
+        color: #bdc3c7;
+    }
+    
+    #twitter {
+        position: absolute;
+        top: 175%;
+        left: 40%;
+        font-size: 65px;
+        color: #bdc3c7;
     }
 }
