@@ -1,0 +1,337 @@
+@media screen and (min-width:375px) and (max-width:400px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .home {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .menu {
+        position: absolute;
+        left: 36.5%;
+        height: 1px;
+        width: 100px;
+        background: #36D7B7;
+    }
+
+    .menuItem {
+        position: absolute;
+        font-family: "Josefin Slab";
+	    font-size: 30px;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: 500;
+	    line-height: 26px;
+        color: #36D7B7;
+    }
+
+    .top { top: 43%; }
+    .mid { top: 48%; }
+    .btm { top: 53%; }
+
+    .about {
+        opacity: 0;
+        top: 36%;
+        left: 8%;
+    }
+    .personalWork {
+        opacity: 0;
+        top: 46%;
+        left: 55%;
+    }
+    .contact {
+        opacity: 0;
+        top: 56%;
+        left: 8%;
+    }
+
+    .aboutMe {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .header {
+        position: absolute;
+        font-family: "Josefin Slab";
+	    font-size: 24px;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: 500;
+	    line-height: 26px;
+        color: #4b4b4b;
+        top: 203%;
+        left: 8%;
+    }
+
+    .bio {
+        position: absolute;
+        font-family: sans-serif;
+        font-size: 15px;
+        color: #4b4b4b;
+        top: 213%;
+        left: 3%;
+    }
+
+    .work {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .social {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .codepen {
+        position: absolute;
+        top: 328%;
+        left: 17.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
+    }
+    
+    .github {
+        position: absolute;
+        top: 328%;
+        left: 59.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
+    }
+    
+    .twitter {
+        position: absolute;
+        top: 358%;
+        left: 17.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
+    }
+    
+    .instagram {
+        position: absolute;
+        top: 358%;
+        left: 59.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
+    }
+
+    .pen {
+        position: absolute;
+        left: 21.2%;
+        top: 20.5%;
+    }
+    
+    .git {
+        position: absolute;
+        left: 20.5%;
+        top: 16%;
+    }
+    
+    .twi {
+        position: absolute;
+        left: 23%;
+        top: 23%;
+    }
+    
+    .ins {
+        position: absolute;
+        left: 24%;
+        top: 20.3%;
+    }
+
+    .flipUp {
+        animation: flipUp 0.5s ease-in-out 0s normal forwards;
+    }
+    .flipUpRev {
+        animation: flipUpRev 0.5s ease-in-out 0s normal forwards;
+    }
+
+    .flipDown {
+        animation: flipDown 0.5s ease-in-out 0s normal forwards;
+    }
+    .flipDownRev {
+        animation: flipDownRev 0.5s ease-in-out 0s normal forwards;
+    }
+
+    .fadeOut {
+        animation: fade 0.3s linear 0s normal forwards;
+    }
+    .fadeIn {
+        animation: fadeRev 0.5s linear 0s normal forwards;
+    }
+
+    .aboutFadeIn {
+        animation: aboutFadeIn 0.5s ease-out 0.2s normal forwards;
+    }
+    .workFadeIn {
+        animation: workFadeIn 0.5s ease-out 0.2s normal forwards;
+    }
+    .contactFadeIn {
+        animation: contactFadeIn 0.5s ease-out 0.2s normal forwards;
+    }
+    .aboutFadeOut {
+        animation: aboutFadeOut 0.5s ease-out 0s normal forwards;
+    }
+    .workFadeOut {
+        animation: workFadeOut 0.5s ease-out 0s normal forwards;
+    }
+    .contactFadeOut {
+        animation: contactFadeOut 0.5s ease-out 0s normal forwards;
+    }
+
+    .emp {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 3.5s ease-in-out 0s normal forwards;
+    }
+
+    @keyframes dash {
+        100% {
+            stroke-dashoffset: 0;
+            fill: #4b4b4b;
+        }
+    }
+
+    @keyframes aboutFadeIn {
+        0% {
+            opacity: 0;
+            left: 8%;
+        }
+        100% {
+            opacity: 1;
+            left: 40%;
+        }
+    }
+     @keyframes aboutFadeOut {
+        0% {
+            opacity: 1;
+            left: 40%;
+        }
+        100% {
+            opacity: 0;
+            left: 8%;
+        }
+    }
+    @keyframes workFadeIn {
+        0% {
+            opacity: 1;
+            left: 55%;
+        }
+        100% {
+            opacity: 1;
+            left: 27%;
+        }
+    }
+     @keyframes workFadeOut {
+        0% {
+            opacity: 1;
+            left: 27%;
+        }
+        100% {
+            opacity: 0;
+            left: 55%;
+        }
+    }
+    @keyframes contactFadeIn {
+        0% {
+            opacity: 0;
+            left: 8%;
+        }
+        100% {
+            opacity: 1;
+            left: 38%;
+        }
+    }
+     @keyframes contactFadeOut {
+        0% {
+            opacity: 1;
+            left: 38%;
+        }
+        100% {
+            opacity: 0;
+            left: 8%;
+        }
+    }
+
+    @keyframes flipDown {
+        0% {
+            top: 43%;
+            left: 36.5%;
+            width: 100px;
+        }
+        100% {
+            transform: rotate(132deg);
+            top: 18%;
+            left: 44%;
+            width: 48px;
+        }
+    }
+     @keyframes flipDownRev {
+         0% {
+            top: 18%;
+            left: 44%;
+            width: 48px;
+         }
+        100% {
+            transform: rotate(-180deg);
+            top: 43%;
+            left: 36.5%;
+            width: 100px;
+        }
+    }
+
+    @keyframes flipUp {
+        0% {
+            top: 53%;
+            left: 36.5%;
+            width: 100px;
+        }
+        100% {
+            transform: rotate(-132deg);
+            top: 18%;
+            left: 44%;
+            width: 48px;
+        }
+    }
+     @keyframes flipUpRev {
+         0% {
+             top: 18%;
+             left: 44%;
+             width: 48px;
+         }
+        100% {
+            transform: rotate(180deg);
+            top: 53%;
+            left: 36.5%;
+            width: 100px;
+        }
+    }
+
+    @keyframes fade {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
+    @keyframes fadeRev {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
