@@ -1,7 +1,7 @@
 @media screen and (min-width:375px) and (max-width:400px) {
     body {
-        -webkit-padding: 0;
-        -webkit-margin: 0;
+        padding: 0;
+        margin: 0;
     }
     
 /*
@@ -16,95 +16,95 @@
     
 
     .work {
-        -webkit-width: 100%;
-        -webkit-height: 150vh;
-        -webkit-background: #FFFFFF;
+        width: 100%;
+        height: 150vh;
+        background: #FFFFFF;
     }
 
     .social {
-        -webkit-width: 100%;
-        -webkit-height: 100vh;
-        -webkit-background: #FFFFFF;
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
     }
 
     .codepen {
-        -webkit-position: absolute;
-        -webkit-top: 185%;
-        -webkit-left: 17.5%;
-        -webkit-height: 70px;
-        -webkit-width: 70px;
-        -webkit-border: solid #4b4b4b;
-        -webkit-border-radius: 100px;
-        -webkit-background: transparent;
+        position: absolute;
+        top: 185%;
+        left: 17.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
     }
     
     .github {
-        -webkit-position: absolute;
-        -webkit-top: 185%;
-        -webkit-left: 59.5%;
-        -webkit-height: 70px;
-        -webkit-width: 70px;
-        -webkit-border: solid #4b4b4b;
-        -webkit-border-radius: 100px;
-        -webkit-background: transparent;
+        position: absolute;
+        top: 185%;
+        left: 59.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
     }
     
     .twitter {
-        -webkit-position: absolute;
-        -webkit-top: 215%;
-        -webkit-left: 17.5%;
-        -webkit-height: 70px;
-        -webkit-width: 70px;
-        -webkit-border: solid #4b4b4b;
-        -webkit-border-radius: 100px;
-        -webkit-background: transparent;
+        position: absolute;
+        top: 215%;
+        left: 17.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
     }
     
     .instagram {
-        -webkit-position: absolute;
-        -webkit-top: 215%;
-        -webkit-left: 59.5%;
-        -webkit-height: 70px;
-        -webkit-width: 70px;
-        -webkit-border: solid #4b4b4b;
-        -webkit-border-radius: 100px;
-        -webkit-background: transparent;
+        position: absolute;
+        top: 215%;
+        left: 59.5%;
+        height: 70px;
+        width: 70px;
+        border: solid #4b4b4b;
+        border-radius: 100px;
+        background: transparent;
     }
 
     .pen {
-        -webkit-position: absolute;
-        -webkit-left: 21.2%;
-        -webkit-top: 20.5%;
+        position: absolute;
+        left: 21.2%;
+        top: 20.5%;
     }
     
     .git {
-        -webkit-position: absolute;
-        -webkit-left: 20.5%;
-        -webkit-top: 16%;
+        position: absolute;
+        left: 20.5%;
+        top: 16%;
     }
     
     .twi {
-        -webkit-position: absolute;
-        -webkit-left: 23%;
-        -webkit-top: 23%;
+        position: absolute;
+        left: 23%;
+        top: 23%;
     }
     
     .ins {
-        -webkit-position: absolute;
-        -webkit-left: 24%;
-        -webkit-top: 20.3%;
+        position: absolute;
+        left: 24%;
+        top: 20.3%;
     }
 
     .emp {
-        -webkit-stroke-dasharray: 1000;
-        -webkit-stroke-dashoffset: 1000;
-        -webkit-animation: dash 3.5s ease-in-out 0s normal forwards;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 3.5s ease-in-out 0s normal forwards;
     }
 
-    -webkit-@keyframes dash {
+    @keyframes dash {
         100% {
-            -webkit-stroke-dashoffset: 0;
-            -webkit-fill: #4b4b4b;
+            stroke-dashoffset: 0;
+            fill: #4b4b4b;
         }
     }
 }
