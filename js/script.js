@@ -1,56 +1,3 @@
-let menu = false;
-
-$('.menu').on('click', function() {
-    if (!menu) {
-        $('.top').removeClass('flipDownRev');
-        $('.mid').removeClass('fadeIn');
-        $('.btm').removeClass('flipUpRev');
-        
-        $('.about').removeClass('aboutFadeOut');
-        $('.personalWork').removeClass('workFadeOut');
-        $('.contact').removeClass('contactFadeOut');
-        
-        $('.top').addClass('flipDown');
-        $('.mid').addClass('fadeOut');
-        $('.btm').addClass('flipUp');
-        
-        $('.about').addClass('aboutFadeIn');
-        $('.personalWork').addClass('workFadeIn');
-        $('.contact').addClass('contactFadeIn');
-        menu = true;
-    }
-    else {
-        $('.top').removeClass('flipDown');
-        $('.mid').removeClass('fadeOut');
-        $('.btm').removeClass('flipUp');
-        
-        $('.about').removeClass('aboutFadeIn');
-        $('.personalWork').removeClass('workFadeIn');
-        $('.contact').removeClass('contactFadeIn');
-        
-        $('.top').addClass('flipDownRev');
-        $('.mid').addClass('fadeIn');
-        $('.btm').addClass('flipUpRev');
-        
-        $('.about').addClass('aboutFadeOut');
-        $('.personalWork').addClass('workFadeOut');
-        $('.contact').addClass('contactFadeOut');
-        menu = false; 
-    }
-});
-
-const section = {
-    0: '.aboutMe',
-    1: '.work',
-    2: '.social'
-};
-
-function scroll(num) {
-    $('body').animate({
-        scrollTop: $(section[num]).offset().top
-    }, 1000);
-}
-
 const translateX = [222, 250, 211, 210, 250, 226, 207, 236, 216, 200, 180, 176, 150, 142, 123, 126, 130, 107, 133, 100, 138, 198, 200, 189, 177, 178];
 const translateY = [155, 110, 151, 98, 80, 82, 64, 56, 50, 42, 34, 22, 34, 27, 38, 51, 87, 55, 74, 100, 97, 51, 167, 166, 188, 221];
 const deg = [210, 40, 36, 10, 0, -5, 0, -40, -21, -80, -90, 80, -115, 50, 30, 0, 180, 15, 0, -80, 80, -45, -148, 30, 18, -180];
@@ -78,5 +25,3 @@ for (var i = 0; i < deg.length; i++) {
     
     mainG.appendChild(group);
 }
-
-	
