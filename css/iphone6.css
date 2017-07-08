@@ -3,21 +3,74 @@
         padding: 0;
         margin: 0;
     }
+
+    .home {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
     
-/*
+    .menuItem {
+        position: absolute;
         font-family: "Josefin Slab";
-	    font-size: 28px;
+	    font-size: 30px;
 	    font-style: normal;
 	    font-variant: normal;
 	    font-weight: 500;
 	    line-height: 26px;
         color: #36D7B7;
-   */
-    
+    }
+
+    .about {
+        border: none;
+        background: transparent;
+        top: 37%;
+        left: 38%;
+    }
+    .personalWork {
+        border: none;
+        background: transparent;
+        top: 47%;
+        left: 25%;
+    }
+    .contact {
+        border: none;
+        background: transparent;
+        top: 57%;
+        left: 36%;
+    }
+
+    .aboutMe {
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .header {
+        position: absolute;
+        font-family: "Josefin Slab";
+	    font-size: 24px;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: 500;
+	    line-height: 26px;
+        color: #4b4b4b;
+        top: 103%;
+        left: 8%;
+    }
+
+    .bio {
+        position: absolute;
+        font-family: sans-serif;
+        font-size: 15px;
+        color: #4b4b4b;
+        top: 113%;
+        left: 3%;
+    }
 
     .work {
         width: 100%;
-        height: 150vh;
+        height: 100vh;
         background: #FFFFFF;
     }
 
@@ -29,7 +82,7 @@
 
     .codepen {
         position: absolute;
-        top: 185%;
+        top: 328%;
         left: 17.5%;
         height: 70px;
         width: 70px;
@@ -40,7 +93,7 @@
     
     .github {
         position: absolute;
-        top: 185%;
+        top: 328%;
         left: 59.5%;
         height: 70px;
         width: 70px;
@@ -51,7 +104,7 @@
     
     .twitter {
         position: absolute;
-        top: 215%;
+        top: 358%;
         left: 17.5%;
         height: 70px;
         width: 70px;
@@ -62,7 +115,7 @@
     
     .instagram {
         position: absolute;
-        top: 215%;
+        top: 358%;
         left: 59.5%;
         height: 70px;
         width: 70px;
@@ -108,3 +161,4 @@
         }
     }
 }
+
