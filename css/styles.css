@@ -15,10 +15,6 @@ svg {
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 @media only screen and (min-device-width: 2200px) and (max-device-width: 2600px) {
     #group {
       transform: translate(270px, 70px) scale(2);
@@ -39,6 +35,6 @@ svg {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     #group {
-      transform: translate(-605px, 220px) scale(2.2);
+      transform: translate(-512px, 175px) scale(2);
     }
 }
