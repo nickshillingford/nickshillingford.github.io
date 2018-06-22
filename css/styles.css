@@ -1,40 +1,22 @@
 body {
+  background-color: #3b3b3b;
   padding: 0;
   margin: 0;
 }
 
-svg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+.container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20%;
+  height: 400px;
+  width: 700px;
 }
 
-.textNode {
-  font-family: "Amatic SC";
-  font-size: 2em;
-  cursor: pointer;
-}
-
-@media only screen and (min-device-width: 2200px) and (max-device-width: 2600px) {
-    #group {
-      transform: translate(270px, 70px) scale(2);
-    }
-}
-
-@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-    #group {
-      transform: translate(200px, 70px);
-    }
-}
-
-@media only screen and (min-device-width: 500px) and (max-device-width: 1025px) {
-    #group {
-      transform: translate(-385px, 150px) scale(1.8);
-    }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    #group {
-      transform: translate(-512px, 175px) scale(2);
-    }
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: #ff5252;
 }
