@@ -1,4 +1,4 @@
-Week 1 – data
+**Week 1 – data**
 
 On the day of the game, I prepared my script using the node tweet stream NPM module, which makes it easy to interface with the public streaming API and to track keywords. The module implements a back off strategy to prevent going over the rate limit and losing access to the API.
 
@@ -12,7 +12,7 @@ I wrote another script to break each file up into smaller files. Each one was so
 ![tweet](https://firebasestorage.googleapis.com/v0/b/web-demo-2188e.appspot.com/o/pic_1.png?alt=media&token=3b649a57-1e7d-4b65-b2bc-679971cc9e30) 
 
 
-Week 2 – design
+**Week 2 – design**
 
 I knew from the start that I wanted the visualization to be an analysis of the tweets minute by minute. I played with a couple of designs, one being a circular clock. The user would scroll to move the clock hands but ultimately this design ended up not fitting. One thing I’ve learned is to not get too excited about an idea because sometimes a design you think will be cool, ends up not being that cool or just doesn’t translate that well from concept to code. I wanted the experience to tell a story, and realized the best way to do that was with the scroll format, using a library called Scrollama and the capabilities provided by D3.
 
@@ -24,7 +24,7 @@ I didn’t want the user to be pressing buttons all the time, or at all if I cou
 ![sketch](https://firebasestorage.googleapis.com/v0/b/web-demo-2188e.appspot.com/o/pic2.png?alt=media&token=08c77d91-6961-45f3-a30b-99a204cf7c03)
 
 
-Week 3 – code
+**Week 3 – code**
 
 The only issue encountered here was displaying the top 3 mentions when the user placed their mouse over a data point. Initially, I had planned to use D3 force layouts to represent each mention as colored circles packed together. Because each SVG element is its own node in the DOM tree, this ended up being problematic for minutes with high numbers of mentions.
 
