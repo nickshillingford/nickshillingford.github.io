@@ -7,7 +7,7 @@ Since all I cared about were the commercials, I decided to track the keywords �
 I wrote another script to break each file up into smaller files. Each one was so large it was having trouble opening in text editors. I decided to ignore retweets, imbedded quotes, and @replies when parsing. With them I would end up presenting inaccurate results in the visualization. Since I was keeping track of which brands and people were mentioned most often, I’d be counting mentions from the same tweet multiple times, which I decided wouldn’t count as a new mention. After analysis, I put all the results into one large JSON object for each hour so they could be accessed easier with JavaScript.
 
 
-*an exampe of JSON tweet objects returned from twitters servers*
+*an example of JSON tweet objects returned by twitter servers*
 
 ![tweet](https://firebasestorage.googleapis.com/v0/b/web-demo-2188e.appspot.com/o/pic_1.png?alt=media&token=3b649a57-1e7d-4b65-b2bc-679971cc9e30) 
 
@@ -16,7 +16,7 @@ I wrote another script to break each file up into smaller files. Each one was so
 
 I knew from the start that I wanted the visualization to be an analysis of the tweets minute by minute. I played with a couple of designs, one being a circular clock. The user would scroll to move the clock hands but ultimately this design ended up not fitting. One thing I’ve learned is to not get too excited about an idea because sometimes a design you think will be cool, ends up not being that cool or just doesn’t translate that well from concept to code. I wanted the experience to tell a story, and realized the best way to do that was with the scroll format, using a library called Scrollama and the capabilities provided by D3.
 
-I didn’t want the user to be pressing buttons all the time, or at all if I could help it. I wanted them to scroll through the entire thing to get the full story without pressing a single button. I would allow them to explore the data further if they wanted to by placing the mouse over any of the data points to reveal more, but it wouldn't be forced. I was worried that a normal bar or line graph would be too boring but D3 provides so much flexibility that you can make any visualization interesting if you really want to. For the graph, I decided to measure each minute by average number of tweets per second instead of total number of tweets in that minute to show how much data Twitter generates every second.
+I didn’t want the user to be pressing buttons all the time, or at all if I could help it. I wanted them to scroll through the entire thing to get the full story without pressing a single button. I would allow them to explore the data further if they wanted to by placing the mouse over any of the data points to reveal more, but it wouldn't be forced. I was also worried that a normal bar or line graph would be too boring but D3 provides so much flexibility that you can make any visualization interesting if you really want to. For the graph, I decided to measure each minute by average number of tweets per second instead of total number of tweets in that minute to show how much data Twitter generates every second.
 
 
 *first design sketches*
