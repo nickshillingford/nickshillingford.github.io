@@ -18,12 +18,6 @@ I knew from the start that I wanted the visualization to be an analysis of the t
 
 I didn’t want the user to be pressing buttons all the time, or at all if I could help it. I wanted them to scroll through the entire thing to get the full story without pressing a single button. I would allow them to explore the data further if they wanted to by placing the mouse over any of the data points to reveal more, but it wouldn't be forced. I was also worried that a normal bar or line graph would be too boring but D3 provides so much flexibility that you can make any visualization interesting if you really want to. For the graph, I decided to measure each minute by average number of tweets per second instead of total number of tweets in that minute to show how much data Twitter generates every second.
 
-
-*first design sketches*
-
-![sketch](https://firebasestorage.googleapis.com/v0/b/web-demo-2188e.appspot.com/o/pic2.png?alt=media&token=08c77d91-6961-45f3-a30b-99a204cf7c03)
-
-
 **Week 3 – code**
 
 The only issue encountered here was displaying the top 3 mentions when the user placed their mouse over a data point. Initially, I had planned to use D3 force layouts to represent each mention as colored circles packed together. Because each SVG element is its own node in the DOM tree, this ended up being problematic for minutes with high numbers of mentions.
