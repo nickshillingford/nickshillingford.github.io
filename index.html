@@ -1,302 +1,56 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/styles.css">
+    h2 {
+      letter-spacing: 2px;
+      font-family: cursive;
+      padding-left: 6px;
+      font-size: 1.75em;
+      color: #333;
+    }
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js'></script>
-	<script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-	<script src='https://unpkg.com/scrollama'></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+    p {
+      font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+      padding-left: 6px;
+      font-size: 0.85em;
+    }
 
-	<script src="js/6pm.js"></script>
-	<script src="js/7pm.js"></script>
-	<script src="js/8pm.js"></script>
-	<script src="js/9pm.js"></script>
+    #sept-2-19 {
+      border-bottom: solid thin #dfe6e9;
+      margin: 0 auto;
+      margin-top: 3%;
+      height: 300px;
+      width: 1350px;
+    }
+  </style>
 </head>
 <body>
-		<section id='intro'>
-			<h1><i>The Great Brand Wars</i></h1>
 
-			<div>
-				<p id="intro-paragraph">
-				  Super Bowl commercials have become an event and are arguably more entertaining than
-					the game itself. Every year the lavish ads get even more absurd with bizarre concepts
-					and over the top theatrics. With companies spending millions of dollars for seconds of
-					airtime, I always look forward to what's next.
-					<br><br>
-					In the chart below, is an analysis of the top 3 mentions on Twitter each minute from
-					6:00 pm to 10:00 pm during Super Bowl LIII on Sunday February 3rd 2019. Place your
-					mouse over any of the data points to reveal the top 3 mentions for that minute.
-				</p>
-			</div>
-		</section>
+  <div id="sept-2-19">
+    <h2>although i don't know you</h2>
+    <p>
+      although i don’t know you, i wish i did.<br>
+      and i’ve got this feeling it would have been great.
+      <br>
+      <br>
+      although i don’t know you, i struggle to keep you off my mind.<br>
+      and i wonder if i’m even on yours.
+      <br>
+      <br>
+      although i don’t know you, it hurts to imagine you with someone who will.<br>
+      and it’s sad to think of what might have been.
+      <br>
+      <br>
+      although i don’t know you, the color blue is overwhelming.<br>
+      but i’ve never seen a shade i didn’t like.
+    </p>
+  </div>
 
-		<section id='scroll'>
-			<div class='scroll__graphic sticky'>
-				<div class='chart'>
-					<svg id="canvas" width="927" height="675"></svg>
-				</div>
-			</div>
-
-			<div class='scroll__text'>
-				<div class='step'>
-					<p>scroll down</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:32 PM
-						<br><br>
-						Marvel Studios kicks things off with a bang by airing a 30 second teaser 
-						for the highly anticipated Avengers Endgame.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:42 PM
-						<br><br>
-						Woman focused dating app Bumble airs it's first ever super bowl commercial
-						featuring tennis star Serena Williams.
-						<br><br>
-						Hulu releases the trailer for the new season of "The Handmaids Tale".
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:50 PM
-						<br><br>
-						Jason Bateman stars as an elevator man in Hyundai's new ad for the
-						company's new model 2020 Palisade SUV.
-						<br><br>
-						Turkish Airlines debuts its new ad titled "The Journey".
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:53 PM
-						<br><br>
-						Olay and Sarah Michelle Gellar step into the spotlight with their
-						entertaining horror themed ad for skin care products.
-						<br><br>
-						#KillerSkin
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:54 PM
-						<br><br>
-						Super Bowl commercial veteran and powerhouse Doritos teams Chance The Rapper
-						up with 90s pop band, the Backstreet Boys, to dance and sing about chips.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						6:58 PM
-						<br><br>
-						Bud Light shames rival brewers for using corn syrup in their beers. The 60 
-						second ad sparked backlash from the corn producing industry.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>6:59 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>7:00 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:13 PM
-						<br><br>
-						Pepsi, Cardi B, Steve Carell and Lil Jon ask the question "Is Pepsi OK?" in this
-						very self-aware ad.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:15 PM
-						<br><br>
-						Another Super Bowl ad veteran, Audi, debuts its new line of electric cars to the
-						world in this futuristic ad that feels like something out of a Christopher Nolan
-						film in the beginning and then takes a dark turn.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:19 PM
-						<br><br>
-						Twenty minutes after it's first ad calling out the competition, Bud Light comes
-						back for more with it's brilliant Game of Thrones themed spot, generating hype 
-						for the upcoming final season.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:27 PM
-						<br><br>
-						The Silicon Valley tech giant airs the spot titled "100 Billion Words" advertising it's
-						Google Translate app.
-						<br><br>
-						Pringles shares a funny but kind of depressing commercial about a personal assistant
-						device that will never know the taste of Pringles.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:43 PM
-						<br><br>
-						Do you love old chunky milk? Apparently Mint Mobile thinks you do. This is one of the most
-						bizarre super bowl ads that I've ever seen, but it got people talking, which was the point 
-						I guess?
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						7:49 PM
-						<br><br>
-						TurboTax airs a weird commercial about a robot named RoboChild that has trouble with emotions
-						and wants to be an accountant?
-						<br><br>
-						Stella Artois airs a normal commercial featuring Sarah Jessica Parker.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>7:59 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>8:00 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						8:36 PM
-						<br><br>
-						Micheal Buble and Bubly barely manage to break into the top 3 with their ad for sparkling
-						water. 
-						<br><br>
-						8 o'clock is dominated by Maroon 5, Adam Levine, Sponge Bob, Travis Scott and
-						Big Boi. Yes, Sponge Bob Square Pants.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						8:58 PM
-						<br><br>
-						Verizon manages to beat Maroon 5 with their heartfelt First Responder ad.
-						<br><br>
-						Netflix also sneaks in with a short trailer for their upcoming series, "Our Planet".
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>8:59 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>9:00 PM</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						9:20 PM
-						<br><br>
-						Microsoft shares a touching commercial focusing on children with special needs and advertising
-						the new Adaptive Controller for Xbox, showing that technology can empower us all.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						9:29 PM
-						<br><br>
-						Burger King's first commercial in 13 years is an artistic one and stars Andy Warhol as he advertises
-						the signature BK Whopper.
-						<br><br>
-					Budweiser announces that their beer is now brewed using 100% renewable energy from wind power. Does 
-					it use corn syrup though?
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						9:36 PM
-						<br><br>
-						Amazon airs a hilarious ad for Alexa starring Harrison Ford and an awesome dog.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						9:43 PM
-						<br><br>
-						Michelob Ultra debuts its new organic beer in another bizarre commercial, featuring Zoe Kravitz doing
-						ASMR.
-					</p>
-				</div>
-
-				<div class='step'>
-					<p>
-						9:56 PM
-						<br><br>
-						In the last big commercial of the night, Tom Hanks does a voice over in this political ad from the
-						Washington Post reminding us that facts matter.
-						<br><br>
-						#DemocracyDiesInDarkness
-					</p>
-				</div>
-
-			</div>
-		</section>
-
-		<section id='outro'>
-			<div>
-				<p>
-					<b>Notes</b>
-					<br>
-					<br>
-					Data gathered using the Twitter Streaming API. Processed and analyzed using
-					Node.js and visualized using
-					<a href="https://github.com/russellgoldenberg/scrollama/blob/master/README.md">
-					  Scrollama
-					</a>,
-					<a href="https://d3js.org/">D3.js</a>
-					and
-					<a href="https://www.chartjs.org/">Chart.js</a>
-					<br>
-					<br>
-					You can read more about how it was made 
-					<a href="https://github.com/nickshillingford/nickshillingford.github.io/blob/master/README.md">
-					  here.
-					</a>
-				</p>
-			</div>
-
-			<p id="footer">
-				made with <i style="color:#ba8ed3" class="fa fa-heart"></i> by nick shillingford
-			</p>
-		</section>
-		<div class='debug'></div>
-		<script src="js/script.min.js"></script>
 </body>
 </html>
