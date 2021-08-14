@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Untitled</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1>itworksonmymachine Blog</h1>
+			</div>
+
+			<div id="theGrid" class="main">
+				<section class="grid">
+
+					<header class="top-bar">
+						<h2 class="top-bar__headline">Posts</h2>
+						<div class="filter">
+							<span class="dropdown">About</span>
+						</div>
+					</header>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">js13kGames 2021</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 13th 2021</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">GLTF files</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 4th 2021</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Vehicle handling</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 23rd 2021</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Offscreen indicators</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 19th 2021</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">Camera work</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Feb 5th 2021</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">World space to screen space</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Nov 24th 2020</span>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">HUD overlay</h2>
+						<div class="loader"></div>
+						<div class="meta meta--preview">
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 9th 2020</span>
+						</div>
+					</a>
+
+					<footer class="page-meta">
+
+					</footer>
+				</section>
+
+				<section class="content">
+					<div class="scroll-wrap">
+
+						<article class="content__item">
+							<h2 class="title title--full">js13kGames 2021</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 13th 2021</span>
+							</div>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">GLTF files</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 4th 2021</span>
+							</div>
+							<p>Most proprietary game engines use custom file formats to fulfill the specific requirements of the game. For general purpose use, we have many different file formats at our disposal. One of the best for storing and working with 3D data is GLTF (GL Transmission Format) and Wanderlust makes use of this file type exclusively in its engine to load scenes and models.</p>
+							<p>Like I mentioned before, the engine is written for the web in JavaScript using Three.js for graphics rendering and Cannon.js for physics simulation. Three.js provides great support for working with GLTF files in the GLTFLoader class. Since GLTF uses JSON-like syntax, we can conveniently define objects in the game world. Here is a high-level example of how we define the ground that the vehicles will drive on.</p>
+							<p>3D modeling applications, such as Blender, have features that allow users to export scenes and models as GLTF. The "extras" attribute shown in the code above can be added to the file and customized to meet the requirements of the application. For my own requirements, I have added the custom attributes "data" and "type" to let the engine know how it should handle the object.</p>
+							<p>Note that GLTF files can come with two different extensions. The .gltf extension is the JSON based version that is easier to view and edit. The other extension is .glb which has all the same data as the JSON version, but is stored in binary instead of plain text.</p>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">Vehicle handling</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 23rd 2021</span>
+							</div>
+
+							<p>This topic is going to take many blog posts to complete. It took a very long time to develop and the material is very complex. I wanted to cover it though, because I think it is very interesting and I learned a lot. I've always been interested in how vehicles work in video games like Grand Theft Auto and the Forza Horizon series. Developing these systems is challenging but rewarding. It becomes interesting from the perspective of video games because there is a lot of room to play around and have fun.</p>
+
+							<p>I learned quite a bit about vehicle handling and tire dynamics from an informative GDC (Game Developers Conference) talk given by Avalanche Studios' Hamish Young a few years ago. Like Hamish says in his presentation, you want the driving to be “believable”, meaning you do not want it to be realistic like a driving simulation, however, you do want it to be somewhat familiar and to feel like the car is behaving as an actual car would.</p>
+
+							<p>For their game, Just Cause 4, Avalanche Studios and Hamish's goals were to land in the sweet spot between Arcade Racer and Simcade Racer. This is also what I set out to achieve with the Wanderlust driving system. This spot is where I think the handling of vehicles in games can potentially be the most fun for the player.</p>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">Offscreen indicators</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 19th 2021</span>
+							</div>
+
+							<p>
+								If we want the offscreen indicator to stick to and float along the edges of the screen while the target is out
+								of view, then it would be best to check where the line from point A to point B intersects with the screen border.
+								We will define the border with an offset so that the indicator has room to point towards the target's direction.
+								The border will contain 4 lines. We will call these east, west, north, and south. If the target is offscreen, we
+								will check if the line from the player to the target intersects with any of these 4 lines
+							</p>
+
+							<p>
+								Any straight line from point P1 to point P2 can be can be represented by the equation
+							</p>
+
+							<p>
+								If we have two straight lines on the same plane, (we'll call them line A and line B), then we can determine their
+								point of intersection (if it exists) by first solving for the point where both line equations are equal to each other.
+								This yields two more equations with the unknown variables UA and UB.
+							</p>
+
+							<p>
+								Solving for both of these unknown variables gives us the following expressions
+							</p>
+
+							<p>
+								If we evaluate just one of these expressions for either UA or UB, and then substitute it into the line equation, we get
+								the point of intersection
+							</p>
+
+							<p>
+								Here it is translated into code
+							</p>
+
+							<p>
+								Now that we have the point where the line from the player to the offscreen target intersects with the screen border, we
+								can stop at the  point of intersection and have the indicator float along the edge of the screen while the target is out
+								of view. To make the indicator a little more helpful to the player, we will add an arrow pointing in the correct direction
+								and make the lines invisible.
+							</p>
+
+							<p>
+								Although I prefer HUDs to be as minimal as possible, waypoints and indicators are elements that I feel are an absolute necessity
+								in game design. Especially in modern open world games, where it can be easy for the player to get lost or difficult for them to
+								find the next objective.
+							</p>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">Camera work</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Feb 5th 2021</span>
+							</div>
+
+							<p>
+								Implementing an offscreen target feature on the HUD requires thought about how to handle objects that are not visible to the camera.
+								In theory, since we have the screen space coordinates for both the player and the target, drawing a line from <span style="color:blue;">
+								point A</span> (player) to <span style="color:gold;">point B</span> (target), and then checking where the line intersects with the screen
+								border should work. However, this does not consider the case of when point B is positioned behind the camera
+							</p>
+
+							<p>
+								The line from <span style="color:blue;">point A</span> to <span style="color:gold;">point B</span> is in the correct position until point
+								B is situated behind the camera. In this case, the world space to screen space calculation causes point B to become flipped, and by extension,
+								the line. This behavior is incorrect. We can solve this problem by flipping the line back when we detect that the camera is in front of point B.
+								First, we must calculate which direction the camera is facing
+							</p>
+
+							<p>
+								Next, we determine where the camera is currently positioned in the world
+							</p>
+
+							<p>
+								Last, we calculate the angle that <span style="color:gold;">point B</span> sits at relative to the camera. If the angle is greater than 90 degrees,
+								then <span style="color:gold;">point B</span> is behind the camera
+							</p>
+
+							<p>
+								If behind evaluates to true, then we want to find a new line from <span style="color:blue;">point A</span> to <span style="color:gold;">point B</span>
+								such that <span style="color:gold;">point B</span> lies in the opposite direction. If the vector, let's call it AB, is defined as
+							</p>
+
+							<p>
+								then we can find the norm (length) of the vector using the following equation
+							</p>
+
+							<p>
+								Next, we want to introduce another vector, let’s call it V, with the norm (length) of 1, and which has the following coordinates
+							</p>
+
+							<p>
+								With this new vector, we can determine the flipped <span style="color:gold;">point B</span> by evaluating the following expressions
+							</p>
+
+							<p>
+								We can substitute in the length of the original vector for the value d. Here it is translated into code
+							</p>
+
+							<p>
+								The function takes the original line and returns the flipped line pointing in the opposite direction. Now,
+								it is behaving as expected.
+							</p>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">World space to screen space</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Nov 24th 2020</span>
+							</div>
+
+							<p>
+								The project function of the Vector3 class allows us to take any 3D point in the game world and convert it into relative
+								2D coordinates on the screen, given that we have already set up the camera. There are other things to consider when using
+								this function, such as visibility and the vector’s position relative to the camera, but this will be discussed in a future
+								blog post. For now, we will assume that the point is within view of the camera
+							</p>
+
+							<p>
+								Note that project(camera) does not return a copy of the vector. Instead, it directly modifies the components of the vector
+								that called the function. So, it is necessary to clone the original vector first so that the 3D components are not lost.
+								Also, note that project(camera) does not complete the entire conversion that we require. Given that the vector is currently
+								visible to the camera, it returns the components of the vector within the range [ -1, +1 ]. This is the vector's position in
+								the normalized device coordinate (NDC) space
+							</p>
+
+							<p>
+								To get the relative screen space coordinates, we must convert the NDC position into the coordinate system used by the HUD overlay.
+								Since the HUD is just an HTML canvas element, its origin starts from the top left, which is (0, 0) in screen space
+							</p>
+
+							<p>
+								The value of 1 is added to the x component in order to set it within the range [ 0, 2 ] and the value of 1 is subtracted from the y
+								component to do the same. In the case of the y component, we are performing subtraction instead of addition and then negating because
+								the origin of the HUD overlay is at the top left
+							</p>
+
+							<p>
+								Finally, multiplying the x and y components by their respective window dimensions, will return the relative screen space coordinates.
+							</p>
+						</article>
+
+						<article class="content__item">
+							<h2 class="title title--full">HUD overlay</h2>
+							<div class="meta meta--full">
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 9th 2020</span>
+							</div>
+
+							<p>
+								Wanderlust is built for the web using Three.js for its rendering engine and Cannon.js for its physics engine.
+								With the web, games can take advantage of Canvas2D, which Wanderlust uses to implement its HUD (Heads Up Display).
+								This is advantageous for 2 main reasons. First, Canvas2D comes integrated with all modern web browsers, and by
+								default, is GPU accelerated for performance boosts. Second, the HUD can be treated as a self contained system,
+								separate from the Three.js library
+							</p>
+
+							<p>
+								It is possible to implement the HUD with Three.js, however, it is not great at rendering text. Also, isolating the
+								HUD helps with quickly identifying bugs and avoiding them. Canvas2D is also capable of parsing and rendering complex
+								SVG path strings. This means that we can quickly load vector graphics that are created in another application, such
+								as Adobe Illustrator, and use them in the HUD.
+							</p>
+
+							<p>
+								Since the HUD is treated as an HTML canvas element on top of the Three.js domElement, this prevents the player from
+								using the mouse and keyboard to interact with the game world. We can get around this problem by using CSS to force
+								the HUD layer into ignoring click events
+							</p>
+
+							<p>
+								Most modern browsers, including Chrome, Firefox, and Safari, understand pointer-events: none. So, this solution suits
+								the requirements.
+							</p>
+						</article>
+
+					</div>
+					<button class="close-button"><i class="fa fa-close"></i><span>Close</span></button>
+				</section>
+
+			</div>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
