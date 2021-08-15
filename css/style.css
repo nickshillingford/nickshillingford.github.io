@@ -22,10 +22,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   overflow-y: scroll;
-  /* force scroll to appear */
 }
 
-/* helper class when showing content */
+.syntax {
+  border: solid 2.25px #dfe6e9;
+  background: #eeeefe;
+  line-height: 0.8em;
+  padding-left: 15px;
+}
+
 .noscroll {
   overflow: hidden;
 }
@@ -47,7 +52,6 @@ button:focus {
 }
 
 img, video {
-  width: 70%;
   height: auto;
 }
 
@@ -68,9 +72,17 @@ img, video {
 
 .sidebar h1 {
   margin: 0.75em 0 0;
-  font-size: 1.5em;
+  font-size: 1.555em;
   line-height: 1;
   font-family: "Playfair Display", serif;
+}
+
+.sidebar h2 {
+  position: absolute;
+  font-size: 0.9em;
+  font-family: "Playfair Display", serif;
+  left: 21.8%;
+  top: 92.18%;
 }
 
 .sidebar h1 span {
@@ -180,7 +192,7 @@ img, video {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #81c483;
+  background-color: #3867d6;
   font-size: 0px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -196,7 +208,7 @@ img, video {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #81c483;
+  background: #3867d6;
   content: '';
 }
 
@@ -210,7 +222,6 @@ img, video {
   transform: translateY(7px);
 }
 
-/* Filter/dropdown dummy on the right */
 .filter {
   text-align: right;
   font-size: 0.75em;
@@ -221,7 +232,7 @@ img, video {
   font-weight: bold;
   margin-left: 5px;
   cursor: pointer;
-  color: #81c483;
+  color: #3867d6;
 }
 
 .dropdown::after {
@@ -267,11 +278,11 @@ img, video {
   z-index: 10;
 }
 
-/* grid item element and full content element styles */
 .title {
   margin: 0;
-  font-size: 1.875em;
-  font-family: "Playfair Display", serif;
+  font-size: 1.475em;
+  letter-spacing: 1px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -708,7 +719,7 @@ img, video {
   z-index: 100;
   top: 0;
   right: 0;
-  font-size: 18px;
+  font-size: 24px;
   color: #ddd;
   cursor: pointer;
   pointer-events: none;
@@ -823,7 +834,7 @@ img, video {
 
   .grid__item:hover::before,
   .grid__item:focus::before {
-    border: 3px solid rgba(129, 196, 131, 0.5);
+    border: 3px solid rgba(56, 103, 214, 0.7);
   }
 
   .grid__item--loading.grid__item::before {
