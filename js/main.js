@@ -68,7 +68,7 @@
       isAnimating = true;
 
       // index of current item
-      current = 7;
+      current = 6;
       aboutSelected = true;
 
       loadContent(about);
