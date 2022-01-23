@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>itworksonmymachine</title>
+		<title>another blog on the internet</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -16,7 +16,6 @@
 
 			<div id="theSidebar" class="sidebar">
 				<button class="close-button fa fa-fw fa-close"></button>
-				<h1>itworksonmymachine</h1>
 				<h2>a blog by Nick Shillingford</h2>
 			</div>
 
@@ -31,44 +30,16 @@
 					</header>
 
 					<a class="grid__item" href="#">
-						<h2 class="title title--preview">GLTF files</h2>
+						<h2 class="title title--preview">i'm doing a thing on youtube</h2>
 						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 4, 2021</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Jan 15, 2022</span>
 						</div>
 					</a>
 
 					<a class="grid__item" href="#">
-						<h2 class="title title--preview">Vehicle handling</h2>
+						<h2 class="title title--preview">top 9 favorite video games of all time</h2>
 						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 23, 2021</span>
-						</div>
-					</a>
-
-					<a class="grid__item" href="#">
-						<h2 class="title title--preview">Offscreen indicators</h2>
-						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 19, 2021</span>
-						</div>
-					</a>
-
-					<a class="grid__item" href="#">
-						<h2 class="title title--preview">Camera work</h2>
-						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Feb 5, 2021</span>
-						</div>
-					</a>
-
-					<a class="grid__item" href="#">
-						<h2 class="title title--preview">From world space to screen space</h2>
-						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Nov 24, 2020</span>
-						</div>
-					</a>
-
-					<a class="grid__item" href="#">
-						<h2 class="title title--preview">Canvas overlay</h2>
-						<div class="meta meta--preview">
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 9, 2020</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 26, 2021</span>
 						</div>
 					</a>
 
@@ -79,415 +50,223 @@
 					<div class="scroll-wrap">
 
 						<article class="content__item">
-							<h2 class="title title--full">GLTF files</h2>
+							<h2 class="title title--full">i'm doing a thing on youtube</h2>
 
 							<br>
 
 							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Aug 4, 2021</span>
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Jan 15, 2022</span>
 							</div>
 
-							<p>Most proprietary game engines use custom file formats to fulfill the specific requirements of the game. For general purpose use, we have many different file formats at our disposal. One of the best for storing and working with 3D data is GLTF (GL Transmission Format) and Wanderlust makes use of this file type exclusively in its engine to load scenes and models.</p>
-
-							<div class="meta meta--full">
-								<img src="images/img_11.png" style="width:40%;" />
-							</div>
-
-							<p>Like I mentioned before, the engine is written for the web in JavaScript using Three.js for graphics rendering and Cannon.js for physics simulation. Three.js provides great support for working with GLTF files in the GLTFLoader class. Since GLTF uses JSON-like syntax, we can conveniently define objects in the game world. Here is a high-level example of how we define the ground that the vehicles will drive on.</p>
-
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>"name": "ground",</p>
-								<p>"extras": {</p>
-									<p style="padding-left:25px;">"data": "physics",</p>
-									<p style="padding-left:25px;">"type": "box"</p>
-								<p>}</p>
-							</div>
-
-							<p>3D modeling applications, such as Blender, have features that allow users to export scenes and models as GLTF. The "extras" attribute shown in the code above can be added to the file and customized to meet the requirements of the application. For my own requirements, I have added the custom attributes "data" and "type" to let the engine know how it should handle the object.</p>
-
-							<div class="meta meta--full">
-								<img src="images/img_15.png" style="width:80%;" />
-							</div>
-
-							<p>Note that GLTF files can come with two different extensions. The <b>.gltf</b> extension is the JSON based version that is easier to view and edit. The other extension is <b>.glb</b> which has all the same data as the JSON version, but is stored in binary instead of plain text.</p>
-						</article>
-
-						<article class="content__item">
-							<h2 class="title title--full">Vehicle handling</h2>
-
-							<br>
-
-							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 23, 2021</span>
-							</div>
-
-							<p>This topic is going to take many blog posts to complete. It took a long time to get working correctly. The material is also extremely broad and complex, so I need to figure out the best way to present it. I want to cover it though, because I think it is interesting and I learned a lot in the process. I've always been interested in how vehicles work in video games like Grand Theft Auto and the Forza Horizon series. Developing these systems is challenging but rewarding. It becomes interesting from the perspective of video games because there is a lot of room to play around and have fun.</p>
-
-							<div class="meta meta--full">
-								<video style="width:60%;" controls="autoplay loop">
-	  							<source src="video/clip_5.mp4" type="video/mp4" />
-	  							Your browser does not support the video tag.
-								</video>
-							</div>
-
-							<p>I learned quite a bit about vehicle handling and tire dynamics from an informative GDC (Game Developers Conference) talk given by Avalanche Studios' Hamish Young a few years ago. Like Hamish says in his presentation, you want the driving to be “believable”, meaning you do not want it to be realistic like a driving simulation, however, you do want it to be somewhat familiar and to feel like the car is behaving as an actual car would.</p>
-
-							<div class="meta meta--full">
-								<img src="images/img_14.jpeg" style="width:70%;" />
-							</div>
-
-							<p>For their game, Just Cause 4, Avalanche Studios and Hamish's goals were to land in the sweet spot between Arcade Racer and Simcade Racer. This is also what I set out to achieve with the Wanderlust driving system. This spot is where I think the handling of vehicles in games can potentially be the most fun for the player.</p>
-						</article>
-
-						<article class="content__item">
-							<h2 class="title title--full">Offscreen indicators</h2>
-
-							<br>
-
-							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Jul 19, 2021</span>
-							</div>
-
-							<p>
-								If we want the offscreen indicator to float along the edges of the screen while the target is out
-								of view, then it would be best to check where the line from point A to point B intersects with the screen border.
-								We will define the border with an offset so that the indicator has room to point towards the target's direction.
-								The border will contain 4 lines. We will call these east, west, north, and south. If the target is offscreen, we
-								will check if the line from the player to the target intersects with any of these 4 lines, like demonstrated in
-								the video clip below
+							<p style="padding-bottom:25px;">
+								Last week, I launched my channel on YouTube, <a href="https://www.youtube.com/channel/UCNpEH5nNePI7odMOcpOgZzQ">Dilworth Studio</a>. Originally
+								inspired by Grant Sanderson and <a href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a>, the goal of the channel is using animated visuals
+								to convey ideas about a variety of topics such as programming, data structures, and algorithms.
 							</p>
 
 							<div class="meta meta--full">
-								<video style="width:60%;" controls="autoplay loop">
-	  							<source src="video/clip_3.mp4" type="video/mp4" />
-	  							Your browser does not support the video tag.
-								</video>
+								<img src="images/img_17.jpeg" style="width:60%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
 							</div>
 
-							<p>
-								Any two intersecting lines in 2D can be represented by the equations
+							<p style="padding-bottom:25px;">
+								Creating the visuals wasn't exactly a simple process at first. I spent many months developing special software tools to help speed up the workflow. I plan
+								to use this blog to start a series of posts documenting the process I went through, and provide behind the scenes looks into how I make the videos.
+								<br><br>
+								I will also explain the thought process behind choosing to develop my own tools instead of using established animation software, such as Adobe After Effects.
+								Eventually, I plan on making the tools I built open source, as well as discussing them in detail on this blog. In this post, I want to talk a little bit about
+								<a href="https://animejs.com/">anime</a>, which is the animation engine the tools are built on top of.
 							</p>
 
 							<div class="meta meta--full">
-								<img src="images/img_6.jpeg" style="width:700px;height:324px;transform:scale(0.7);" />
+								<img src="images/img_19.gif" style="width:60%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
 							</div>
 
-							<div class="meta meta--full">
-								<img src="images/img_5.jpeg" style="width:700px;height:324px;transform:scale(0.7);" />
-							</div>
-
-							<p>
-								If we have two straight lines on the same plane, (we'll refer to them as line A and line B), then we can determine their
-								point of intersection (if it exists) by first solving for the point where both line equations are equal to each other.
-								This yields two more equations with the unknown variables <b>ua</b> and <b>ub</b>. Solving for both of these unknown
-								variables gives us the following expressions
-							</p>
-
-							<div class="meta meta--full">
-								<img src="images/img_7.jpeg" style="width:900px;height:324px;transform:scale(0.7);" />
-							</div>
-
-							<p>
-								If we evaluate just one of these expressions for either <b>ua</b> or <b>ub</b>, and then substitute it into the line equation,
-								we get the point of intersection (if it exists). Here it is translated into code
+							<p style="padding-top:25px;">
+								A second animation library called <a href="https://greensock.com/">greensock</a> is used for only one specific feature that it provides. Which is setting the
+								transform origin of an object to the center. Greensock is able to achieve this with just one simple line of code:
 							</p>
 
 							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>function getLineIntersection(x1, y1, x2, y2, x3, y3, x4, y4)</p>
-							  <p>{</p>
-							      <p style="padding-left:25px;">var denominator = ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));</p>
-										<br>
-							      <p style="padding-left:25px;">var ua = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / denominator;</p>
-							      <p style="padding-left:25px;">var ub = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / denominator;</p>
-										<br>
-							      <p style="padding-left:25px;">var intersection_x = (x1 + ua * (x2 - x1));</p>
-							      <p style="padding-left:25px;">var intersection_y = (y1 + ua * (y2 - y1));</p>
-										<br>
-							      <p style="padding-left:25px;">return {</p>
-							        <p style="padding-left:50px;">x: intersection_x,</p>
-							        <p style="padding-left:50px;">y: intersection_y</p>
-							      <p style="padding-left:25px;">};</p>
-							  <p>}</p>
+								<p><span style="color:#1B9CFC;">TweenMax</span>.<span style="color:#FC427B;">set</span>( whateverObjectYouWant, { transformOrigin: '50% 50%' } );</p>
 							</div>
 
 							<p>
-								Now that we have the point where the line from the player to the offscreen target intersects with the screen border, we
-								can stop at the  point of intersection and have the indicator float along the edge of the screen while the target is out
-								of view. To make the indicator a little more helpful to the player, we will add an arrow pointing in the correct direction
-								and make the lines invisible. This is demonstrated in the video below.
+								This allows objects to be animated easily from their center like this:
 							</p>
 
 							<div class="meta meta--full">
-								<video style="width:60%;" controls="autoplay loop">
-	  							<source src="video/clip_4.mp4" type="video/mp4" />
-	  							Your browser does not support the video tag.
-								</video>
+								<img src="images/img_20.gif" style="width:60%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
 							</div>
 
 							<p>
-								Although I prefer HUDs to be as minimal as possible, waypoints and indicators are elements that I feel are an absolute necessity
-								in game design. Especially in modern open world games, where it can be easy for the player to get lost or difficult for them to
-								find the next objective.
+								Instead of like this:
+							</p>
+
+							<div class="meta meta--full">
+								<img src="images/img_21.gif" style="width:60%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
+							</div>
+
+							<p style="padding-bottom:20px;">
+								But this is literally all it is used for. The rest of the animation seen on the channel is powered by anime. There are pros and cons to both anime and
+								greensock, but ultimately, I settled on anime for its accessibility, great documentation, and file size. The entire library is only 18kb when minified.
+								There is also a wide selection of animation easing functions that are included with the base library.
+							</p>
+
+							<div class="meta meta--full">
+								<img src="images/img_22.gif" style="width:60%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
+							</div>
+
+							<p style="padding-top:25px;">
+								This is unlike greensock, which requires a separate module for easing.
 							</p>
 						</article>
 
 						<article class="content__item">
-							<h2 class="title title--full">Camera work</h2>
+							<h2 class="title title--full">top 9 favorite video games of all time</h2>
 
 							<br>
 
 							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Feb 5, 2021</span>
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 26, 2021</span>
 							</div>
 
-							<p>
-								Implementing an offscreen target feature on the HUD requires thought about how to handle objects that are not visible to the camera.
-								In theory, since we have the screen space coordinates for both the player and the target, drawing a line from
-								<span style="color:blue;">point A</span> (player) to <span style="color:gold;">point B</span> (target), and then checking where the
-								line intersects with the screen border should work. However, this does not consider the case of when point B is positioned behind the camera
+							<p style="padding-bottom:25px;">
+								Recently, I watched youtuber jacksepticeye discuss his 9 favorite video games of all time in this <a href="https://youtu.be/QvcRWSm04CY">video</a>. I
+								thought I would take a nostalgic trip down memory lane to reminisce on the games that have stuck with me in some way or another over the years. These are 9
+								beautiful collections of pixels that each hold a special place in my heart.
 							</p>
 
 							<div class="meta meta--full">
-								<video style="width:60%;" controls="autoplay loop">
-	  							<source src="video/clip_2.mp4" type="video/mp4" />
-	  							Your browser does not support the video tag.
-								</video>
+								<img src="images/img_18.png" style="width:75%;filter:drop-shadow(0 6px 6px #4B4B4B);" />
 							</div>
 
-							<p>
-								As demonstrated in the video clip above, the line from point A to point B is in the correct position until point
-								B is situated behind the camera. In this case, the world space to screen space calculation causes point B to become flipped, and by extension,
-								the line. This behavior is <b>not</b> correct. We can solve this problem by flipping the line back when we detect that the camera is in front of point B.
-								First, we must calculate which direction the camera is facing. Three.js makes this easy with getWorldDirection
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Portal 2 (2011)</b>
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>var camera_dir = camera.getWorldDirection(new THREE.Vector3());</p>
-							</div>
-
 							<p>
-								Next, we determine where the camera is currently positioned in the world
+								Portal 2 was the first game that I played on the Xbox 360 back in May 2011. In my opinion, it is a shining example of how to do a sequel
+								right. It built on what made the first Portal great. Innovative gameplay mechanics, brilliantly written new characters, and incredible level
+								design. Sprinkled on top are some amazing sound effects that blew me away when I decided to play the game with headphones on one day. Over the
+								years, I’ve tried to find a flaw in Portal 2, but I literally cannot think of a single one.
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>var camera_pos = new THREE.Vector3().setFromMatrixPosition(camera.matrixWorld);</p>
-								<p>camera_pos = vector_copy.sub(camera_pos);</p>
-							</div>
-
-							<p>
-								Last, we calculate the angle that point B sits at relative to the camera. If the angle is greater than 90 degrees,
-								then point B is behind the camera
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>The Witcher 3 (2015)</b>
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>
-									var isBehind = ((camera_pos.angleTo(camera_dir)) > (Math.PI / 2));
-								</p>
-							</div>
-
 							<p>
-								If the boolean variable <b>isBehind</b> evaluates to true, then we want to find a new line from point A to point B
-								such that point B lies in the opposite direction. If we have any 2D vector with the coordinates
+								I was never a fan of the fantasy genre in any medium. Games, movies, television, or books. It was never my cup of tea. The Witcher 3 changed that.
+								Regarded by many to be the game that proved you could give players freedom in a large open world, while at the same time, telling good stories with
+								interesting characters. In my opinion, to this day, Witcher 3 still remains the high standard to which all other open world RPGs are held (in terms
+								of writing). Also, I'm addicted to Gwent.
 							</p>
 
-							<div class="meta meta--full" style="font-size:0.7em;">
-								<img src="images/img_1.jpeg" style="width:600px;height:100px;transform:scale(0.7);" />
-							</div>
-
-							<p>
-								then we can find the norm (length) of the vector using the following equation. We will refer to this value as <b>AB</b>
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Journey (2012)</b>
 							</p>
 
-							<div class="meta meta--full" style="font-size:0.7em;">
-								<img src="images/img_2.jpeg" style="width:600px;height:100px;transform:scale(0.7);" />
-							</div>
-
 							<p>
-								Next, we want to introduce another vector with the norm (length) of 1, and which has the following coordinates
+								The first game that I played on the Playstation 3. Journey is something special. Something different. Not a single word is spoken in the entire game.
+								But it all still works. It is one of those games you have to experience for yourself. Twenty twelve was a difficult year. I remember feeling lost, like
+								many of us do sometimes. Journey reminded me that life isn't about the destination, but the journey (please excuse the awful joke). And all of the amazing
+								people you can meet along the way that make life worth living.
 							</p>
 
-							<div class="meta meta--full" style="font-size:0.7em;">
-								<img src="images/img_3.jpeg" style="width:600px;height:200px;transform:scale(0.7);" />
-							</div>
-
-							<p>
-								With this new vector, we can determine the flipped point B by evaluating the following expressions
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>The Last of Us (2013)</b>
 							</p>
 
-							<div class="meta meta--full" style="font-size:0.7em;">
-								<img src="images/img_4.jpeg" style="width:600px;height:200px;transform:scale(0.7);" />
-							</div>
-
 							<p>
-								We can substitute in the length of the original vector for the value <b>d</b>. Here it is translated into code
+								This was the year when games began to rise to the level of Hollywood films in terms of rich thematic storytelling and complex characters. Now, almost a decade
+								later, The Last of Us is about to come to HBO. The first video game in history to transcend into the world of television on the legendary platform that is HBO.
+								Filled with unforgettable moments, the story of the Last of Us is one that I hope as many people as possible get to experience. Joel and Ellie will forever live
+								rent free inside of my head.
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>function flipLine(x1, y1, x2, y2)<p>
-						    <p>{</p>
-						        <p style="padding-left:25px;">var norm = Math.sqrt(</p>
-						          <p style="padding-left:50px;">Math.pow((x2 - x1), 2) +</p>
-						          <p style="padding-left:50px;">Math.pow((y2 - y1), 2)</p>
-										<p style="padding-left:25px;">);</p>
-										<br>
-						  		  <p style="padding-left:25px;">return {</p>
-						  		    <p style="padding-left:50px;">x: x1 - (norm + window.innerWidth) * ((x2 - x1) / norm),</p>
-						  		    <p style="padding-left:50px;">y: y1 - (norm + window.innerWidth) * ((y2 - y1) / norm)</p>
-						  		  <p style="padding-left:25px;">}</p>
-								<p>}</p>
-							</div>
-
-							<div class="meta meta--full">
-								<video style="width:60%;" controls="autoplay loop">
-	  							<source src="video/clip_1.mp4" type="video/mp4" />
-	  							Your browser does not support the video tag.
-								</video>
-							</div>
-
-							<p>
-								The function <b>flipLine</b> takes the original line points and returns the flipped line pointing in the opposite direction.
-								Now the calculation is behaving as expected when the target is behind the camera.
-							</p>
-						</article>
-
-						<article class="content__item">
-							<h2 class="title title--full">From world space to screen space</h2>
-
-							<br>
-
-							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Nov 24, 2020</span>
-							</div>
-
-							<p>
-								The project function of the Three.js Vector3 class allows us to take any 3D point in the game world and convert it into
-								relative 2D coordinates on the screen, given that we have already set up the camera. There are other things to consider
-								when using this function, such as visibility and the vector’s position relative to the camera, but this will be discussed
-								in a future blog post. For now, we will assume that the point is within view of the camera
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Bully (2006)</b>
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>var vector_copy = target.clone();</p>
-								<p>vector_copy.project(camera);</p>
-							</div>
-
 							<p>
-								Note that project (camera) does not return a copy of the vector. Instead, it directly modifies the components of the vector
-								that called the function. So, it is necessary to clone the original vector (target) first so that the 3D components are not
-								lost. Also, note that project (camera) does not complete the entire conversion that we require. Given that the vector is
-								currently visible to the camera, it returns the components of the vector within the range [ -1, +1 ]. This is the vector's
-								position in the normalized device coordinate (NDC) space. The origin (0, 0) in NDC space is in the center of the screen
+								Bully released during a very relevant time in my life, given what the game is about. As a confused teenager in high school, I could relate to Jimmy Hopkins as he
+								navigated the social landscape of Bullworth Academy. As someone who was picked on and bullied myself, this game still resonates with me 15 years later. I remember
+								one particular weekend not long after the game launched. I literally stayed up for 24 hours straight playing the game non-stop. I was obsessed.
 							</p>
 
-							<div class="meta meta--full">
-								<img src="images/img_9.png" style="width:60%;transform:scale(0.9);" />
-							</div>
-
-							<p>
-								To get the relative screen space coordinates, we must convert the NDC position into the coordinate system used by the HUD overlay.
-								Since the HUD is an HTML canvas element, its origin (0, 0) starts from the top left of the screen
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Fallout 3 (2008)</b>
 							</p>
 
-							<div class="meta meta--full">
-								<img src="images/img_10.png" style="width:70%;transform:scale(0.9);" />
-							</div>
-
 							<p>
-								The value of 1 is added to the <b>x</b> component in order to set it within the range [ 0, 2 ] and the value of 1 is subtracted from
-								the <b>y</b> component to do the same. In the case of the <b>y</b> component, we are performing subtraction instead of addition and
-								then negating because the origin of the HUD overlay is at the top left
+								As the final year of high school came to a close, everyone was busy preparing for college. I was playing Fallout 3. I'll never forget the moment that I stepped out of
+								Vault 101 and into the Capital Wasteland for the first time. My jaw dropped upon realizing how massive this game was going to be. It was very exciting. What followed over
+								the next couple of years was countless hours of exploring the ruins of Washington DC, and my hometown of Northern Virginia.
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>vector_copy.x = (vector_copy.x + 1) * (window.innerWidth / 2);</p>
-								<p>vector_copy.y = -(vector_copy.y - 1) * (window.innerHeight / 2);</p>
-							</div>
-
-							<p>
-								Finally, multiplying the <b>x</b> and <b>y</b> components by their respective window dimensions, will return the relative screen space
-								coordinates.
-							</p>
-						</article>
-
-						<article class="content__item">
-							<h2 class="title title--full">Canvas overlay</h2>
-
-							<br>
-
-							<div class="meta meta--full">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> Oct 9, 2020</span>
-							</div>
-
-							<p>
-								Wanderlust is built for the web using <a href="https://threejs.org/">Three.js</a> for the rendering engine and
-								<a href="https://schteppe.github.io/cannon.js/">Cannon.js</a> for the physics engine.
-								With the web, games can take advantage of Canvas2D, which Wanderlust uses to implement its HUD (Heads Up Display).
-								This is advantageous for 2 main reasons. First, Canvas2D comes integrated with all modern web browsers, and by
-								default, is GPU accelerated for performance boosts. Second, the HUD can be treated as a self contained system,
-								separate from the Three.js library
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Disco Elysium (2019)</b>
 							</p>
 
-							<div class="meta meta--full">
-								<img src="images/img_8.jpeg" style="width:60%;" />
-							</div>
-
 							<p>
-								It would be possible to implement the HUD with Three.js, however, it is not great at rendering text. Also, isolating
-								the HUD helps with quickly identifying bugs and avoiding them. Canvas2D is also capable of parsing and rendering
-								complex SVG path strings with Path2D. This means that we can quickly load vector graphics that are created in another
-								application, such as Adobe Illustrator, and use them in the HUD.
+								The most recent game on this list in terms of the date it was released. Disco Elysium came out exactly two years ago this month. It is easily the most creative and out of
+								the box game I have played since the original Portal. This is the closest I've ever seen a video game get to the feeling of an actual tabletop role-playing experience. I cannot
+								wait to see what ZA/UM follows this game up with next. The world of Elysium is one that I need to see more of in the future.
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>var path = new Path2D("M -4.47 10.50 L -1.07 4.73 C -1.04 4.57 -1.02 4.40 -1.00 4.23");</p>
-								<p>context.stroke(path);</p>
-							</div>
-
-							<p>
-								Since the HUD is treated as an HTML canvas element on top of the Three.js domElement, this prevents the player from
-								using the mouse and keyboard to interact with the game world. We can get around this problem by using CSS to force
-								the HUD layer into ignoring click events
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Pokemon Blue (1998)</b>
 							</p>
 
-							<div class="meta meta--full syntax" style="font-size:0.7em;">
-								<p>pointer-events: none;</p>
-								<p>background: none !important;</p>
-							</div>
+							<p>
+								I could not decide if I wanted to include this one in my list, but ultimately, I had to. This was the first video game I ever bought at 8 years old. I love Pokemon. I still remember
+								what the cashier at Toys R Us said to me after I paid for it. She said, "Here you go shorty, have fun", as she handed me the bag with the game inside it. That fact is completely random
+								and useless, but for some reason, it has stuck with me all these years. I have no idea why.
+							</p>
+
+							<p style="padding-top:25px;padding-bottom:10px;font-size:1.8em;">
+								<b>Red Dead Redemption I and II (2010 and 2018)</b>
+							</p>
 
 							<p>
-								Most modern browsers, including Chrome, Firefox, and Safari, understand pointer-events: none. So, this solution suits
-								the requirements.
+								Okay, so I'm cheating a little bit here by including two games, but I consider these masterpieces to be one big story. Red Dead Redemption II feels incomplete without the first game and vice versa.
+								I can say with absolute certainty that Red Dead Redemption II is my favorite video game of all time.
 							</p>
+
+							<p>
+								I came to know and love each member of the Van Der Linde gang like they were members of my own family. Never have I been so invested in a group of fictional characters. It is a beautiful story
+								about love, loss, and regret. Dwelling on the past is something I can relate to. Red Dead Redemption II taught me that it is never too late in life to try and achieve something.
+							</p>
+
+							<p>
+								You cannot change the past. All you can do is move forward and try to be the best person that you can be. You can move forward and try to put as much good into the world as you can with the time that you
+								have left.
+							</p>
+
+							<p>Thank you Arthur Morgan. Thank you Rockstar Games.</p>
 						</article>
 
 						<article class="content__item">
 							<h2 class="title title--full">About</h2>
 
 							<p style="padding-top:25px;">
-								Hello and welcome to my blog!
+								Hello and welcome!
 							</p>
 
 							<p style="padding-top:25px;">
-								I enjoy the outdoors, traveling, writing, music, and making things. Here you will find my
-								musings on software development, programming, game development, mathematics, technology, art, and anything
-								else I'm interested in.
+								My name is Nick. I enjoy the outdoors, traveling, writing, music, and making things. Here you will find my
+								random musings on software development, programming, game development, mathematics, technology, art, and
+								anything else I'm interested in.
 							</p>
 
 							<p style="padding-top:25px;padding-bottom:25px;">
-								Thanks for reading.
+								Thanks for reading!
 							</p>
 
 							<div class="meta meta--full" style="font-size:0.7em;">
-								<img src="images/img_16.jpeg" style="height:5%;width:30%;" />
-								<br><br><br>
-								<button style="background:none;border:none;">
-									<a href="https://linkedin.com/in/nshill">
-										<i class="fa fa-linkedin" style="font-size:24px;color:#bdc3c7;"></i>
-									</a>
-								</button>
-								<button style="background:none;border:none;">
+								<button style="background:none;border:none;float:left;">
 									<a href="https://www.youtube.com/channel/UCNpEH5nNePI7odMOcpOgZzQ">
-										<i class="fa fa-youtube-play" style="font-size:24px;color:#bdc3c7;"></i>
+										<i class="fa fa-youtube-play" style="font-size:8em;color:#FF0000;"></i>
 									</a>
 								</button>
 							</div>

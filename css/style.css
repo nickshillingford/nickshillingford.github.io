@@ -241,12 +241,11 @@ img, video {
   font-size: 80%;
 }
 
-/* Grid item */
 .grid__item {
   padding: 45px 55px 30px;
   position: relative;
   color: inherit;
-  background: #fff;
+  background: #FFFFFF;
   min-height: 300px;
   cursor: pointer;
   text-align: center;
@@ -263,7 +262,7 @@ img, video {
   justify-content: center;
 }
 
-/* Grid item "border" */
+/* Grid item border */
 .grid__item::before {
   position: absolute;
   content: '';
@@ -585,7 +584,8 @@ img, video {
   max-width: 1200px;
   margin: 1em auto;
   text-align: justify;
-  font-size: 1.3em;
+  line-height: 1.52em;
+  font-size: 1.3693em;
 }
 
 .content__item.content__item--show {
@@ -605,7 +605,7 @@ img, video {
 }
 
 .title--full {
-  font-size: 3.25em;
+  font-size: 2.24em;
 }
 
 .meta--full {
